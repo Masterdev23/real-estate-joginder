@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joginder Properties</title>
+    <link rel="stylesheet" href="./assets/css/normalize.css">
+  <link rel="stylesheet" href="./real-estate-website/src/assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <nav class="navbar">
+            <div class="logo">
+                <img src="./real-estate-website/src/assets/imgs/your logo-prop-3.png" alt="Real Estate Logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/listings">Properties</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+            <button class="contact-btn">Get in Touch</button>
+        </nav>
+    </header>
+    
+    <main>
+
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="animate-text">Find Your Dream Home</h1>
+            <p class="animate-text">Discover the perfect property from our extensive collection</p>
+            
+            <form class="search-form animate-text">
+                <div class="search-container">
+                    <input type="text" placeholder="Enter location or property type">
+                    <select name="property-type">
+                        <option value="">Property Type</option>
+                        <option value="house">House</option>
+                        <option value="apartment">Apartment</option>
+                        <option value="villa">Villa</option>
+                    </select>
+                    <button type="submit">Search Properties</button>
+                </div>
+            </form>
+        </div>
+     
+    </section>
+<!-- ...existing code... -->
+        <section class="featured-properties">
+            <h2>Featured Properties</h2>
+            <div class="property-grid" id="property-cards">
+                <!-- Property cards will be inserted here dynamically -->
+            </div>
+            <button class="view-all-btn">View All Properties</button>
+        </section>
+        
+        <section class="why-choose-us">
+            <h2>Why Choose Us</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-home"></i>
+                    <h3>Wide Range of Properties</h3>
+                    <p>Browse through our extensive collection of carefully selected properties</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-medal"></i>
+                    <h3>Trusted by Thousands</h3>
+                    <p>Join our satisfied customers who found their perfect home</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-headset"></i>
+                    <h3>24/7 Support</h3>
+                    <p>Our dedicated team is always here to help you</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="contact-cta">
+            <div class="cta-content">
+                <h2>Ready to Find Your Dream Home?</h2>
+                <p>Contact us now and let our experts guide you through the process</p>
+                <button class="cta-button">Contact Us Now</button>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>Your trusted partner in real estate, helping you find the perfect property since 2010.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="/properties">Properties</a></li>
+                    <li><a href="/agents">Our Agents</a></li>
+                    <li><a href="/blog">Blog</a></li>
+                    <li><a href="/privacy">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p>
+                    <i class="fas fa-map-marker-alt"></i> 123 Real Estate Ave<br>
+                    <i class="fas fa-phone"></i> (555) 123-4567<br>
+                    <i class="fas fa-envelope"></i> info@realestate.com
+                </p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Real Estate Website. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/api.js"></script>
+</body>
+</html>
