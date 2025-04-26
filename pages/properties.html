@@ -1,0 +1,109 @@
+pages\properties.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Properties - Real Estate</title>
+    <link rel="stylesheet" href="/css/properties.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+  <section class="all-properties">
+    <div class="section-header" data-aos="fade-up">
+        <h2>Discover Your Dream Property</h2>
+        <p class="section-subtitle">Explore our handpicked collection of premium properties</p>
+        
+        <div class="search-container" data-aos="fade-up" data-aos-delay="100">
+            <i class="fas fa-search search-icon"></i>
+            <input type="text" id="searchInput" placeholder="Search by location or property name...">
+            <button class="search-clear" id="clearSearch">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+    </div>
+
+    <div class="filters-container">
+        <div class="filters" data-aos="fade-up" data-aos-delay="200">
+            <div class="filter-group">
+                <h3><i class="fas fa-home"></i> Property Type</h3>
+                <div class="filter-options">
+                    <label class="filter-option">
+                        <input type="radio" name="propertyType" value="all" checked>
+                        <span class="option-card">
+                            <i class="fas fa-globe"></i>
+                            <span>All Types</span>
+                        </span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="radio" name="propertyType" value="residential">
+                        <span class="option-card">
+                            <i class="fas fa-house-user"></i>
+                            <span>Residential</span>
+                        </span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="radio" name="propertyType" value="commercial">
+                        <span class="option-card">
+                            <i class="fas fa-building"></i>
+                            <span>Commercial</span>
+                        </span>
+                    </label>
+                    <label class="filter-option">
+                        <input type="radio" name="propertyType" value="villa">
+                        <span class="option-card">
+                            <i class="fas fa-hotel"></i>
+                            <span>Villa</span>
+                        </span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="filter-group">
+                <h3><i class="fas fa-rupee-sign"></i> Price Range</h3>
+                <div class="price-range-container">
+                    <div class="range-slider">
+                        <input type="range" id="priceRange" min="0" max="50000000" step="1000000" value="50000000">
+                    </div>
+                    <div class="price-labels">
+                        <span class="min-price">₹0</span>
+                        <span id="selectedPrice" class="selected-price">₹5 Cr</span>
+                    </div>
+                    <div class="price-presets">
+                        <button class="preset-btn" data-price="5000000">< ₹50L</button>
+                        <button class="preset-btn" data-price="10000000">< ₹1 Cr</button>
+                        <button class="preset-btn" data-price="20000000">< ₹2 Cr</button>
+                        <button class="preset-btn" data-price="50000000">< ₹5 Cr</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="filters-actions" data-aos="fade-up" data-aos-delay="300">
+            <button id="resetFilters" class="reset-btn">
+                <i class="fas fa-undo"></i> Reset Filters
+            </button>
+            <div class="active-filters" id="activeFilters"></div>
+        </div>
+    </div>
+
+    <div id="propertiesContainer" class="properties-grid">
+        <!-- Properties will be loaded here dynamically -->
+    </div>
+
+    <div id="loading" class="loading-spinner">
+        <div class="spinner-content">
+            <i class="fas fa-spinner fa-spin"></i> 
+            <span>Discovering properties for you...</span>
+        </div>
+    </div>
+</section>
+   
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="../js/propertyData.js" type="module"></script>
+<script src="../js/properties.js" type="module"></script>
+  
+    
+</body>
+</html>

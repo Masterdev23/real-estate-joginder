@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="./assets/css/normalize.css">
   <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.39.5/dist/umd/supabase.min.js"></script>
+    <script src="./js/supabase-config.js" type="module"></script>
+</head>
 </head>
 <body>
     <header class="main-header">
@@ -63,6 +66,7 @@
                     </select>
                 </div>
     
+             
                 <button class="search-btn">
                     Search Property
                 </button>
@@ -139,10 +143,10 @@
     </div>
     
     <div class="cta-wrapper" data-aos="fade-up">
-        <button class="view-all-btn">
+        <a href="./pages/properties.html" class="view-all-btn">
             <span>View All Properties</span>
             <i class="fas fa-arrow-right"></i>
-        </button>
+        </a>
     </div>
 </section>
         
@@ -278,7 +282,5 @@
         </div>
     </footer>
 
-    <script src="./assets/js/main.js"></script>
-    <script src="./assets/js/api.js"></script>
 </body>
 </html>
