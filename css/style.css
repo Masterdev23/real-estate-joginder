@@ -266,7 +266,7 @@ body {
 /* Media queries for responsive design */
 @media (max-width: 1024px) {
   .hero {
-    background: url('/images/banner-prop-new.png') no-repeat center center;
+    background: url('/images/jogi-prop-banner-1024px.png') no-repeat center center;
     background-size: cover;
     background-attachment: scroll;
     height: 90vh;
@@ -275,7 +275,7 @@ body {
 
 @media (max-width: 768px) {
   .hero {
-    background: url('/images/banner-mobile.png') no-repeat center center;
+    background: url('/images/jogi-prop-banner-768px.png') no-repeat center center;
     background-size: cover;
     height: 80vh;
     padding: 60px 20px;
