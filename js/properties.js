@@ -228,11 +228,17 @@ class PropertyManager {
     renderProperties(properties) {
         if (properties.length === 0) {
             this.propertiesContainer.innerHTML = `
-                <div class="no-results" data-aos="fade-up">
+                     <div class="no-results">
+                <div class="shape-decoration">
+                    <div class="shape"></div>
+                    <div class="shape"></div>
+                </div>
+                <div class="no-results-content">
                     <i class="fas fa-search"></i>
                     <h3>No Properties Found</h3>
                     <p>Try adjusting your filters to find more properties</p>
                 </div>
+            </div>
             `;
             return;
         }
