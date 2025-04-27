@@ -8,29 +8,34 @@
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.39.5/dist/umd/supabase.min.js"></script>
-    <script src="./js/supabase-config.js" type="module"></script>
+  <link rel="stylesheet" href="./css/navbar.css">
+
 </head>
 </head>
 <body>
-    <header class="main-header">
-        <nav class="navbar">
-            <div class="logo">
-                <img src="./real-estate-website/src/assets/imgs/your logo-prop-3.png" alt="Real Estate Logo">
-            </div>
-            <ul class="nav-links">
-                <li><a href="/">Home</a></li>
-                <li><a href="/listings">Properties</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="./pages/contact.html">Contact</a></li>
-            </ul>
-            <button class="contact-btn" onclick="window.location.href='./pages/contact.html'">
-           
-         
-            Get in Touch</button>
-        </nav>
-    </header>
+    <header class="navbar">
+        <div class="nav-brand">
+            <img src="./images/your logo-prop-3.png" alt="Joginder Properties Logo" class="nav-logo">
+            <a href="index.html" class="brand-name">Joginder Properties</a>
+        </div>
     
+        <nav class="nav-menu">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
+                <li class="nav-item"><a href="./pages/properties.html" class="nav-link">Properties</a></li>
+                <li class="nav-item"><a href="./pages/pricing.html" class="nav-link">Pricing</a></li>
+                <li class="nav-item"><a href="./pages/gallery.html" class="nav-link">Gallery</a></li>
+                <li class="nav-item"><a href="./pages/about.html" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="./pages/contact.html" class="nav-link contact-btn">Contact Us</a></li>
+            </ul>
+        </nav>
+    
+        <button class="hamburger" aria-label="Toggle menu">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
+    </header>
     <main>
 
     <section class="hero">
@@ -245,7 +250,93 @@
                 <p>Contact us now and let our experts guide you through the process</p>
                 <button class="cta-button">Contact Us Now</button>
             </div>
+        </section><!-- Add this after the featured-properties section -->
+        <section class="featured-locations">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Featured Locations</h2>
+                <p class="section-subtitle">Explore Prime Properties in Popular Areas</p>
+            </div>
+        
+            <div class="locations-scroll-container">
+                <button class="scroll-btn prev-btn" aria-label="Scroll left">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                
+                <div class="locations-wrapper">
+                    <div class="location-cards">
+                        <div class="location-card">
+                            <img src="./images/luxury villa.jpeg" alt="Gurgaon">
+                            <div class="location-info">
+                                <h3>Gurgaon</h3>
+                                <p class="property-count">150+ Properties</p>
+                                <p class="location-desc">Premium residential hub with modern infrastructure and excellent connectivity.</p>
+                                <a href="/locations/gurgaon" class="view-location">
+                                    Explore Properties 
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="location-card">
+                            <img src="./images/locations/delhi.jpg" alt="Delhi">
+                            <div class="location-info">
+                                <h3>Delhi</h3>
+                                <p class="property-count">200+ Properties</p>
+                                <p class="location-desc">Historic capital with diverse property options from luxury to affordable homes.</p>
+                                <a href="/locations/delhi" class="view-location">
+                                    Explore Properties 
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="location-card">
+                            <img src="./images/locations/noida.jpg" alt="Noida">
+                            <div class="location-info">
+                                <h3>Noida</h3>
+                                <p class="property-count">120+ Properties</p>
+                                <p class="location-desc">Tech hub with modern apartments and excellent investment opportunities.</p>
+                                <a href="/locations/noida" class="view-location">
+                                    Explore Properties 
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="location-card">
+                            <img src="./images/locations/faridabad.jpg" alt="Faridabad">
+                            <div class="location-info">
+                                <h3>Faridabad</h3>
+                                <p class="property-count">80+ Properties</p>
+                                <p class="location-desc">Growing suburban area with affordable housing and industrial developments.</p>
+                                <a href="/locations/faridabad" class="view-location">
+                                    Explore Properties 
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="location-card">
+                            <img src="./images/locations/greater-noida.jpg" alt="Greater Noida">
+                            <div class="location-info">
+                                <h3>Greater Noida</h3>
+                                <p class="property-count">100+ Properties</p>
+                                <p class="location-desc">Planned city with spacious layouts and upcoming smart city projects.</p>
+                                <a href="/locations/greater-noida" class="view-location">
+                                    Explore Properties 
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <button class="scroll-btn next-btn" aria-label="Scroll right">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
         </section>
+
     </main>
     
     <footer class="main-footer">
@@ -285,6 +376,8 @@
             <p>&copy; 2025 Real Estate Website. All rights reserved.</p>
         </div>
     </footer>
+<script src="./js/scroll.js"></script>
+<script src="./js/nav.js"></script>
 
 </body>
 </html>
