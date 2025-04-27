@@ -26,29 +26,71 @@
 
         <!-- Contact Options Grid -->
         <section class="contact-options">
-            <div class="options-grid">
-                <!-- Quick Contact Card -->
-                <div class="contact-card" data-aos="fade-up" data-aos-delay="100">
-                    <i class="fas fa-phone-alt"></i>
-                    <h3>Call Us</h3>
-                    <p>Speak directly with our experts</p>
-                    <a href="tel:+1234567890" class="contact-link">+1 (234) 567-890</a>
-                </div>
-
-                <!-- Email Card -->
-                <div class="contact-card" data-aos="fade-up" data-aos-delay="200">
-                    <i class="fas fa-envelope"></i>
-                    <h3>Email Us</h3>
-                    <p>Get in touch via email</p>
-                    <a href="mailto:info@realestate.com" class="contact-link">info@realestate.com</a>
-                </div>
-
-                <!-- Visit Card -->
-                <div class="contact-card" data-aos="fade-up" data-aos-delay="300">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <h3>Visit Us</h3>
-                    <p>Come to our office</p>
-                    <address class="contact-link">123 Real Estate Ave, City, Country</address>
+            <div class="options-container">
+                <h2 class="options-title" data-aos="fade-up">Ways to Connect</h2>
+                <div class="options-grid">
+                    <!-- Call Card -->
+                    <div class="contact-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>Call Us</h3>
+                            <p>Available 24/7 for your queries</p>
+                            <div class="contact-details">
+                                <a href="tel:+1234567890" class="contact-link">
+                                    <i class="fas fa-phone-volume"></i>
+                                    +1 (234) 567-890
+                                </a>
+                                <span class="availability">Mon - Sat: 9AM - 6PM</span>
+                            </div>
+                        </div>
+                        <button class="action-btn" onclick="window.location.href='tel:+1234567890'">
+                            Call Now <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+        
+                    <!-- Email Card -->
+                    <div class="contact-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="card-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>Email Us</h3>
+                            <p>Get in touch via email</p>
+                            <div class="contact-details">
+                                <a href="mailto:info@realestate.com" class="contact-link">
+                                    <i class="fas fa-envelope"></i>
+                                    info@realestate.com
+                                </a>
+                                <span class="response-time">Response within 24 hours</span>
+                            </div>
+                        </div>
+                        <button class="action-btn" onclick="window.location.href='mailto:info@realestate.com'">
+                            Send Email <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+        
+                    <!-- Visit Card -->
+                    <div class="contact-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="card-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>Visit Us</h3>
+                            <p>Come to our office</p>
+                            <div class="contact-details">
+                                <address class="contact-link">
+                                    <i class="fas fa-location-dot"></i>
+                                    123 Real Estate Ave, City, Country
+                                </address>
+                                <span class="office-hours">Open Hours: 9AM - 6PM</span>
+                            </div>
+                        </div>
+                        <button class="action-btn" onclick="window.open('https://maps.google.com')">
+                            Get Directions <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
         </section>
@@ -134,10 +176,7 @@
         </section>
 
         <!-- Map Section -->
-         <div class="map-header" data-aos="fade-up">
-            <h2>Find Us Here</h2>
-            <p>Visit our office for personalized assistance</p>
-            </div>
+        
         <section class="map-section" data-aos="fade-up">
             <div class="map-container">
               
@@ -168,6 +207,25 @@
                     <h3>How long does the process take?</h3>
                     <p>The entire process usually takes 2-4 weeks, depending on various factors. Our team will guide you through each step.</p>
                 </div>
+                    <!-- Additional FAQ items (hidden initially) -->
+        <div class="faq-item hidden" data-aos="fade-up" data-aos-delay="100">
+            <h3>What are the payment options available?</h3>
+            <p>We accept various payment methods including bank transfer, mortgage financing, and structured payment plans. Contact our financial advisors for details.</p>
+        </div>
+        <div class="faq-item hidden" data-aos="fade-up" data-aos-delay="200">
+            <h3>Can I rent before buying?</h3>
+            <p>Yes, we offer rent-to-own options on selected properties. This allows you to experience the property before making a final purchase decision.</p>
+        </div>
+        <div class="faq-item hidden" data-aos="fade-up" data-aos-delay="300">
+            <h3>What are the maintenance charges?</h3>
+            <p>Maintenance charges vary by property and include security, cleaning, and upkeep. Detailed charges will be provided during property viewing.</p>
+        </div>
+            </div>
+            <div class="load-more-container" data-aos="fade-up">
+                <button id="loadMoreFaq" class="load-more-btn">
+                    <span>Load More</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
             </div>
         </section>
     </main>
@@ -216,6 +274,6 @@
             once: true
         });
     </script>
-    <script src="../js/contact.js"></script>
+<script src="../js/load-faq.js"></script>
 </body>
 </html>

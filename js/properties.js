@@ -310,3 +310,4 @@ class PropertyManager {
 document.addEventListener('DOMContentLoaded', () => {
     new PropertyManager();
 });
+
