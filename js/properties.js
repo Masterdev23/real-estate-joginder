@@ -211,11 +211,17 @@ class PropertyManager {
 
     showWelcomeMessage() {
         this.propertiesContainer.innerHTML = `
-            <div class="welcome-message" data-aos="fade-up">
-                <i class="fas fa-home"></i>
-                <h2>Find Your Perfect Property</h2>
-                <p>Use the filters above to discover properties that match your preferences</p>
-            </div>
+         <div class="welcome-message" data-aos="fade-up">
+    <div class="background-shapes">
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+    <div class="content-wrapper">
+        <i class="fas fa-home"></i>
+        <h2>Find Your Perfect Property</h2>
+        <p>Use the filters above to discover properties that match your preferences</p>
+    </div>
+</div>
         `;
     }
 
@@ -232,11 +238,11 @@ class PropertyManager {
         }
 
         this.propertiesContainer.innerHTML = properties.map(property => `
-            <div class="property-card" data-aos="fade-up">
-                <div class="property-image">
-                    <img src="${property.image}" alt="${property.title}" onerror="this.src='../images/placeholder.jpg'">
-                    <span class="property-tag">${property.status}</span>
-                </div>
+           <div class="property-card" data-aos="fade-up">
+            <div class="property-image">
+                <img src="${property.image || './images/placeholder.jpg'}" alt="${property.title}" onerror="this.onerror=null; this.src='./images/placeholder.jpg';">
+                <span class="property-tag">${property.status}</span>
+            </div>
                 <div class="property-content">
                     <h3 class="property-title">${property.title}</h3>
                     <div class="property-location">
