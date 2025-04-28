@@ -34,14 +34,31 @@ body {
   background: var(--primary-color);
 }
 
-.hero-video {
+.video-container {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  z-index: 1;
+  overflow: hidden;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100vw;
+  height: 100vh;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+/* Ensure hero section maintains position context */
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  background: #000; /* Fallback color */
 }
 
 .hero::after {
@@ -91,35 +108,6 @@ body {
   margin-top: 1rem;
 }
 
-/* Filter Bar */
-.filter-bar {
-  position: sticky;
-  top: 0;
-  background: var(--background-light);
-  padding: 1rem var(--container-padding);
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  flex-wrap: wrap;
-  z-index: 10;
-  box-shadow: var(--shadow-sm);
-}
-
-.filter-select {
-  min-width: 200px;
-  padding: 0.8rem 1.5rem;
-  border: 1px solid #ddd;
-  border-radius: 30px;
-  background: white;
-  font-size: 0.95rem;
-  cursor: pointer;
-  transition: var(--transition);
-}
-
-.filter-select:hover {
-  border-color: var(--accent-color);
-  box-shadow: var(--shadow-sm);
-}
 
 /* Gallery Section */
 .photo-gallery, .video-tours {
@@ -309,7 +297,7 @@ body {
 }
 
 .btn.secondary {
-  background: transparent;
+  background: var(--primary-color);
   border: 2px solid white;
   color: white;
 }
@@ -326,9 +314,7 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .filter-select {
-      min-width: 150px;
-  }
+  
 
   .gallery-grid {
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -356,9 +342,6 @@ body {
       font-size: 2rem;
   }
 
-  .filter-select {
-      width: 100%;
-  }
 
   .gallery-item {
       aspect-ratio: 1;

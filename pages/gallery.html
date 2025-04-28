@@ -14,11 +14,41 @@
 <body>
     <!-- Include your navbar here -->
 
+    <header class="navbar">
+        <div class="nav-brand">
+            <img src="../images/your logo-prop-3.png" alt="Joginder Properties Logo" class="nav-logo">
+            <a href="index.html" class="brand-name">Joginder Properties</a>
+        </div>
+
+        
+        <nav class="nav-menu">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="../index.html" class="nav-link active">Home</a></li>
+                <li class="nav-item"><a href="./properties.html" class="nav-link">Properties</a></li>
+                <li class="nav-item"><a href="./" class="nav-link">Pricing</a></li>
+                <li class="nav-item"><a href="./gallery.html" class="nav-link">Gallery</a></li>
+                <li class="nav-item"><a href="./about.html" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="./contact.html" class="nav-link contact-btn">Contact Us</a></li>
+            </ul>
+        </nav>
+
+        <button class="hamburger" aria-label="Toggle menu">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+        </button>
+    </header>
+
     <!-- Hero Section -->
     <section class="hero">
-        <video class="hero-video" autoplay muted loop>
-            <source src="../videos/hero-property.mp4" type="video/mp4">
-        </video>
+        <div class="video-container">
+            <iframe 
+                src="https://www.youtube.com/embed/wOjiyhRYiK8?autoplay=1&mute=1&loop=1&playlist=wOjiyhRYiK8&controls=0"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+        </div>
         <div class="hero-content">
             <h1 data-aos="fade-up">Discover Your Dream Home</h1>
             <p data-aos="fade-up" data-aos-delay="200">Explore breathtaking properties through stunning photos and immersive videos</p>
@@ -30,34 +60,7 @@
     </section>
 
     <!-- Filter Bar -->
-    <div class="filter-bar">
-        <select class="filter-select">
-            <option value="">Location</option>
-            <option value="delhi">Delhi</option>
-            <option value="gurgaon">Gurgaon</option>
-            <option value="noida">Noida</option>
-        </select>
-        <select class="filter-select">
-            <option value="">Property Type</option>
-            <option value="apartment">Apartment</option>
-            <option value="house">House</option>
-            <option value="villa">Villa</option>
-        </select>
-        <select class="filter-select">
-            <option value="">Price Range</option>
-            <option value="0-50">₹0 - ₹50L</option>
-            <option value="50-100">₹50L - ₹1Cr</option>
-            <option value="100+">₹1Cr+</option>
-        </select>
-        <select class="filter-select">
-            <option value="">Bedrooms</option>
-            <option value="1">1 BHK</option>
-            <option value="2">2 BHK</option>
-            <option value="3">3 BHK</option>
-            <option value="4">4+ BHK</option>
-        </select>
-    </div>
-
+ 
     <!-- Photo Gallery Section -->
     <section id="gallery" class="photo-gallery">
       <h2 class="section-title" data-aos="fade-up">Featured Properties in Pictures</h2>
@@ -100,11 +103,53 @@
             <a href="#" class="btn tertiary">Get Brochure</a>
         </div>
     </section>
+     
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>Your trusted partner in real estate, helping you find the perfect property since 2010.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="/properties">Properties</a></li>
+                    <li><a href="/agents">Our Agents</a></li>
+                    <li><a href="/blog">Blog</a></li>
+                    <li><a href="/privacy">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p>
+                    <i class="fas fa-map-marker-alt"></i> 123 Real Estate Ave<br>
+                    <i class="fas fa-phone"></i> (555) 123-4567<br>
+                    <i class="fas fa-envelope"></i> info@realestate.
+                </p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Real Estate Website. All rights reserved.</p>
+            <div class="developer-credits">
+                <p>Designed & Developed by <a href="https://srdev.vercel.app/" target="_blank">Sachin Yadav and Vishal Mohanta</a></p>
+            </div>
+        </div>
+    </footer>
 
     <!-- Include your footer here -->
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="../js/gallery.js"></script>
     <script src="../js/gallery-load.js"></script>
+    <script src="../js/nav.js"></script>
 </body>
 </html>

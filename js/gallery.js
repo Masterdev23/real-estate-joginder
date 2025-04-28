@@ -37,14 +37,6 @@ document.addEventListener('DOMContentLoaded', function() {
       videoGrid.appendChild(videoItem);
   });
 
-  // Filter Functionality
-  const filters = document.querySelectorAll('.filter-select');
-  filters.forEach(filter => {
-      filter.addEventListener('change', function() {
-          // Add your filter logic here
-          console.log('Filter changed:', this.value);
-      });
-  });
 
   // Video Player
   const playButtons = document.querySelectorAll('.play-button');
