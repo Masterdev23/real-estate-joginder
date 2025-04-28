@@ -41,6 +41,7 @@ body {
   background-size: cover;
   z-index: -1;
   pointer-events: none;
+  background-attachment: scroll; /* Added for better mobile compatibility */
 }
 
 /* Update text colors for better visibility */
@@ -49,6 +50,13 @@ body {
   color: #fff;
   position: relative;
   z-index: 1;
+}
+@media (max-width: 768px) {
+  .featured-properties::before {
+      background-attachment: scroll;
+      height: 100%;
+      position: absolute;
+  }
 }
 
 .featured-properties .section-header h2::after {
@@ -474,7 +482,15 @@ body {
   transform-style: preserve-3d;
   will-change: transform;
 }
-
+@media (max-width: 768px) {
+    .hero-parallax {
+        /* Remove fixed attachment for mobile */
+        background-attachment: scroll;
+        /* Ensure background covers the area */
+        background-position: center;
+        background-size: cover;
+    }
+}
 .hero-content {
   position: relative;
   z-index: 2;
