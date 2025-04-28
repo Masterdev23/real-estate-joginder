@@ -71,21 +71,19 @@
 }
 
 /* Timeline Section */
+/* Timeline Section */
+/* Timeline Section */
 .story-section {
   padding: 100px 0;
   background: linear-gradient(to bottom, #f8f9fa, #ffffff);
   overflow: hidden;
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
 .timeline {
   position: relative;
   padding: 40px 0;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .timeline::before {
@@ -94,29 +92,35 @@
   left: 50%;
   transform: translateX(-50%);
   width: 4px;
-  height: 100%;
-  background: linear-gradient(to bottom, #e74c3c, #f39c12);
+  height: calc(100% - 60px);
+  background: linear-gradient(to bottom, var(--secondary-color), #f39c12);
   border-radius: 2px;
 }
 
 .timeline-item {
   position: relative;
-  margin-bottom: 60px;
+  margin-bottom: 80px;
   width: 100%;
   display: flex;
   justify-content: center;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
 }
 
 .timeline-dot {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
-  background: #e74c3c;
+  background: var(--secondary-color);
   border: 4px solid #fff;
   box-shadow: 0 0 0 4px rgba(231, 76, 60, 0.2);
+  z-index: 2;
+  top: 15px;
 }
 
 .timeline-content {
@@ -124,10 +128,14 @@
   padding: 30px;
   background: #fff;
   border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-sm);
   position: relative;
-  transform: translateY(-50%);
-  margin-top: 10px;
+  transition: var(--transition);
+}
+
+.timeline-content:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
 }
 
 .timeline-item:nth-child(odd) .timeline-content {
@@ -141,21 +149,21 @@
 }
 
 .timeline-date {
-  position: absolute;
-  top: -40px;
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: #e74c3c;
-  background: #fff;
-  padding: 5px 15px;
-  border-radius: 20px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(359deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 0%, rgba(252, 176, 69, 1) 100%);
+  color: var(--text-light);
+  padding: 8px 20px;
+  border-radius: 25px;
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
 }
 
 .timeline-details h3 {
-  color: #2c3e50;
+  color: var(--text-dark);
   font-size: 1.5rem;
   margin-bottom: 15px;
+  font-weight: 600;
 }
 
 .timeline-details p {
@@ -172,49 +180,61 @@
 .milestone-list li {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   color: #555;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   font-size: 0.95rem;
 }
 
 .milestone-list i {
-  color: #e74c3c;
+  color: var(--secondary-color);
+  font-size: 1.1rem;
 }
 
 /* Responsive Design */
-@media (max-width: 968px) {
+@media (max-width: 992px) {
   .timeline::before {
       left: 30px;
+  }
+
+  .timeline-dot {
+      left: 30px;
+      top: 20px;
+  }
+
+  .timeline-content {
+      width: calc(100% - 70px);
+      margin-left: 70px !important;
+      transform: translateX(0) !important;
+  }
+
+  .timeline-date {
+      font-size: 1rem;
   }
 
   .timeline-item {
       justify-content: flex-start;
   }
-
-  .timeline-dot {
-      left: 30px;
-  }
-
-  .timeline-content {
-      width: calc(100% - 80px);
-      margin-left: 80px !important;
-      transform: translateX(0) !important;
-  }
-
-  .timeline-date {
-      top: -30px;
-      left: 0;
-      font-size: 1rem;
-  }
 }
 
 @media (max-width: 576px) {
   .story-section {
-      padding: 60px 0;
+      padding: 60px 15px;
+  }
+
+  .timeline::before {
+      left: 20px;
+  }
+
+  .timeline-dot {
+      left: 20px;
+      width: 20px;
+      height: 20px;
   }
 
   .timeline-content {
+      width: calc(100% - 50px);
+      margin-left: 50px !important;
       padding: 20px;
   }
 
@@ -224,23 +244,34 @@
 
   .timeline-date {
       font-size: 0.9rem;
+      padding: 6px 15px;
   }
 
   .milestone-list li {
       font-size: 0.9rem;
   }
 }
-.year {
-  min-width: 120px;
-  padding: 1rem;
-  background: #833AB4;
-background: linear-gradient(359deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 0%, rgba(252, 176, 69, 1) 100%);
-  color: var(--text-light);
-  text-align: center;
-  border-radius: 30px;
-  position: relative;
-  z-index: 1;
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
 }
+
+.timeline-item {
+  opacity: 0;
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.timeline-item:nth-child(1) { animation-delay: 0.2s; }
+.timeline-item:nth-child(2) { animation-delay: 0.4s; }
+.timeline-item:nth-child(3) { animation-delay: 0.6s; }
 .section-title {
   font-size: 2.8rem;
   color: #2c3e50;
@@ -334,58 +365,12 @@ background: linear-gradient(359deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 
   color: var(--text-light);
 }
 
-/* Team Section */
-.team-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  padding: 3rem 0;
-}
 
-.team-card {
-  background: white;
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: var(--shadow-sm);
-}
-
-.member-image {
-  position: relative;
-  overflow: hidden;
-}
-
-.member-image img {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-  transition: var(--transition);
-}
-
-.member-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.7);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transition: var(--transition);
-}
-
-.team-card:hover .member-overlay {
-  opacity: 1;
-}
-
-.team-card:hover .member-image img {
-  transform: scale(1.1);
-}
 
 /* Achievements Section */
 .achievements-section {
-  background: var(--gradient-primary);
+  background: #833AB4;
+  background: linear-gradient(359deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 0%, rgba(252, 176, 69, 1) 100%);
   color: var(--text-light);
   padding: 5rem 0;
 }
@@ -434,8 +419,8 @@ background: linear-gradient(359deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 
       gap: 1rem;
   }
 
-  .values-grid,
-  .team-grid {
+  .values-grid
+   {
       grid-template-columns: 1fr;
   }
 }
