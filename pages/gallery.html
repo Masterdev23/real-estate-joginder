@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Joginder Properties</title>
+    <link rel="stylesheet" href="../css/gallery.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Include your navbar here -->
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <video class="hero-video" autoplay muted loop>
+            <source src="../videos/hero-property.mp4" type="video/mp4">
+        </video>
+        <div class="hero-content">
+            <h1 data-aos="fade-up">Discover Your Dream Home</h1>
+            <p data-aos="fade-up" data-aos-delay="200">Explore breathtaking properties through stunning photos and immersive videos</p>
+            <div class="hero-buttons" data-aos="fade-up" data-aos-delay="400">
+                <a href="#gallery" class="btn primary">View Listings</a>
+                <a href="../pages/contact.html" class="btn secondary">Book a Virtual Tour</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Bar -->
+    <div class="filter-bar">
+        <select class="filter-select">
+            <option value="">Location</option>
+            <option value="delhi">Delhi</option>
+            <option value="gurgaon">Gurgaon</option>
+            <option value="noida">Noida</option>
+        </select>
+        <select class="filter-select">
+            <option value="">Property Type</option>
+            <option value="apartment">Apartment</option>
+            <option value="house">House</option>
+            <option value="villa">Villa</option>
+        </select>
+        <select class="filter-select">
+            <option value="">Price Range</option>
+            <option value="0-50">₹0 - ₹50L</option>
+            <option value="50-100">₹50L - ₹1Cr</option>
+            <option value="100+">₹1Cr+</option>
+        </select>
+        <select class="filter-select">
+            <option value="">Bedrooms</option>
+            <option value="1">1 BHK</option>
+            <option value="2">2 BHK</option>
+            <option value="3">3 BHK</option>
+            <option value="4">4+ BHK</option>
+        </select>
+    </div>
+
+    <!-- Photo Gallery Section -->
+    <section id="gallery" class="photo-gallery">
+      <h2 class="section-title" data-aos="fade-up">Featured Properties in Pictures</h2>
+      <p class="section-desc" data-aos="fade-up">Each home tells a story. Take a glimpse at our finest selections across prime locations.</p>
+      
+      <div class="masonry-gallery" id="masonry-gallery">
+          <!-- Images will be added here dynamically -->
+      </div>
+  
+      <div class="load-more-container">
+          <button id="load-more" class="btn primary">Load More</button>
+      </div>
+  </section>
+
+    <!-- Video Tours Section -->
+    <section class="video-tours">
+        <h2 class="section-title" data-aos="fade-up">Experience Properties Like Never Before</h2>
+        <p class="section-desc" data-aos="fade-up">Walk through our listings with high-definition video tours, curated for your convenience.</p>
+        
+        <div class="video-grid">
+            <!-- Video items will be dynamically added here -->
+        </div>
+    </section>
+
+    <!-- Virtual Tour Banner -->
+    <section class="virtual-tour-banner">
+        <div class="banner-content">
+            <h2 data-aos="fade-up">Interactive Home Experiences</h2>
+            <p data-aos="fade-up" data-aos-delay="200">Step inside your future home with our immersive 360° virtual tours</p>
+            <a href="#" class="btn primary" data-aos="fade-up" data-aos-delay="400">Start Virtual Tour</a>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="final-cta">
+        <h2 data-aos="fade-up">Found something you love?</h2>
+        <div class="cta-buttons" data-aos="fade-up" data-aos-delay="200">
+            <a href="#" class="btn primary">Schedule a Visit</a>
+            <a href="#" class="btn secondary">Contact Our Agent</a>
+            <a href="#" class="btn tertiary">Get Brochure</a>
+        </div>
+    </section>
+
+    <!-- Include your footer here -->
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../js/gallery.js"></script>
+    <script src="../js/gallery-load.js"></script>
+</body>
+</html>

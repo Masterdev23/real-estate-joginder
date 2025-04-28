@@ -616,6 +616,7 @@ body {
 @media (max-width: 768px) {
   .hero-content h1 {
       font-size: 3rem;
+      margin-top: 1rem;
   }
   
   .hero-content p {
