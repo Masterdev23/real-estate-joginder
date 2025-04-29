@@ -27,10 +27,15 @@ class PropertyManager {
         this.filters = {
             search: '',
             propertyType: 'all',
-            maxPrice: parseInt(this.priceRangeSlider?.value || 50000000)
+            maxPrice: 0  // Set initial maxPrice to 0
         };
         this.searchTimeout = null;
-        this.updatePriceLabel(this.filters.maxPrice);
+        
+        // Set initial slider value to 0
+        if (this.priceRangeSlider) {
+            this.priceRangeSlider.value = "0";
+            this.updatePriceLabel(0);
+        }
     }
 
     init() {
@@ -51,6 +56,7 @@ class PropertyManager {
             }, 300);
         });
 
+        
         // Clear search
         this.clearSearchBtn?.addEventListener('click', () => {
             this.searchInput.value = '';
@@ -168,47 +174,48 @@ class PropertyManager {
         this.updateActiveFilters();
     }
 
-    updateActiveFilters() {
-        const activeFilters = [];
-        
-        if (this.filters.search) {
-            activeFilters.push(`
-                <span class="active-filter">
-                    Search: "${this.filters.search}"
-                    <button data-filter="search"><i class="fas fa-times"></i></button>
-                </span>
-            `);
-        }
-        
-        if (this.filters.propertyType !== 'all') {
-            activeFilters.push(`
-                <span class="active-filter">
-                    Type: ${this.filters.propertyType}
-                    <button data-filter="type"><i class="fas fa-times"></i></button>
-                </span>
-            `);
-        }
-
-        const maxPrice = parseInt(this.priceRangeSlider.max);
-        if (this.filters.maxPrice < maxPrice) {
-            activeFilters.push(`
-                <span class="active-filter">
-                    Max Price: ₹${this.formatPrice(this.filters.maxPrice)}
-                    <button data-filter="price"><i class="fas fa-times"></i></button>
-                </span>
-            `);
-        }
-
-        this.activeFiltersContainer.innerHTML = activeFilters.join('');
-        
-        // Add click handlers for removing individual filters
-        this.activeFiltersContainer.querySelectorAll('button').forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                this.clearFilter(e.currentTarget.dataset.filter);
-            });
-        });
+// Find the existing updateActiveFilters method and replace it with this:
+updateActiveFilters() {
+    const activeFilters = [];
+    
+    if (this.filters.search) {
+        activeFilters.push(`
+            <div class="active-filter-tag" data-type="search">
+                ${this.filters.search}
+                <i class="fas fa-times" data-filter="search"></i>
+            </div>
+        `);
+    }
+    
+    if (this.filters.propertyType !== 'all') {
+        activeFilters.push(`
+            <div class="active-filter-tag" data-type="type">
+                ${this.filters.propertyType}
+                <i class="fas fa-times" data-filter="type"></i>
+            </div>
+        `);
     }
 
+    const maxPrice = parseInt(this.priceRangeSlider.max);
+    if (this.filters.maxPrice < maxPrice) {
+        activeFilters.push(`
+            <div class="active-filter-tag" data-type="price">
+                ₹${this.formatPrice(this.filters.maxPrice)}
+                <i class="fas fa-times" data-filter="price"></i>
+            </div>
+        `);
+    }
+
+    this.activeFiltersContainer.innerHTML = activeFilters.join('');
+    
+    // Add click handlers for removing individual filters
+    this.activeFiltersContainer.querySelectorAll('.active-filter-tag i').forEach(closeBtn => {
+        closeBtn.addEventListener('click', (e) => {
+            const filterType = e.currentTarget.dataset.filter;
+            this.clearFilter(filterType);
+        });
+    });
+}
     showWelcomeMessage() {
         this.propertiesContainer.innerHTML = `
          <div class="welcome-message" data-aos="fade-up">
