@@ -1138,7 +1138,7 @@ body {
       top: 0;
       height: 100%;
       width: 60px;
-      background: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,0.9));
+    
       pointer-events: none;
       z-index: 2;
   }
@@ -1150,7 +1150,7 @@ body {
       top: 0;
       height: 100%;
       width: 60px;
-      background: linear-gradient(to left, rgba(255,255,255,0), rgba(255,255,255,0.9));
+
       pointer-events: none;
       z-index: 2;
   }

@@ -35,7 +35,7 @@ html {
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   line-height: 1.6;
-  color: var(--text-color);
+ 
   background-color: var(--light-gray);
   overflow-x: hidden;
   min-height: 100vh;
@@ -49,18 +49,11 @@ body {
   background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
 }
 
-.all-properties {
-  position: relative;
-  z-index: 2;
-  width: var(--container-width);
-  margin: 0 auto;
-  padding: clamp(20px, 4vw, 40px);
-}
 
 
 /* Update existing filter styles for better visibility */
 .filter-group {
-  background: white;
+  
   box-shadow: 0 5px 20px rgba(0,0,0,0.1);
 }
 
@@ -70,38 +63,76 @@ body {
 /* Section Headers */
 .section-header {
   text-align: center;
-  margin-bottom: clamp(40px, 8vh, 80px);
-  padding: 0 clamp(20px, 4vw, 40px);
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  color: #ffffff;
 }
 
 .section-header h2 {
-  font-size: clamp(2rem, 5vw, 2.8rem);
-  background: var(--gradient);
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 1rem;
+  font-weight: 700;
+  background: linear-gradient(45deg, #e74c3c, #f39c12);
   -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  margin-bottom: 15px;
-  font-weight: 800;
-  line-height: 1.2;
-  letter-spacing: -0.5px;
+  -webkit-text-fill-color: transparent;
 }
 
 .section-subtitle {
-  font-size: clamp(1rem, 2vw, 1.2rem);
-  color: var(--dark-gray);
-  max-width: 600px;
-  margin: 0 auto;
-  line-height: 1.6;
+  font-size: 1.1rem;
+  color: #f8f9fa;
+  opacity: 0.9;
 }
 
 /* Layout & Container Styles */
 .all-properties {
-    padding: 80px 20px;
-    max-width: 1400px;
-    margin: 0 auto;
-    background: var(--light-gray);
+  position: relative;
+  padding: 80px 20px;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+              url('../../images/banner-prop-new.png') no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+  width: 100%;
+  margin: 0;
 }
 
+/* Add a fallback background color */
+.all-properties::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--primary-color);
+  z-index: -1;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  .all-properties {
+      background-attachment: scroll; /* Better mobile performance */
+  }
+}
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .all-properties {
+      padding: 60px 15px;
+  }
+
+  .filters-container {
+      padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .all-properties {
+      padding: 40px 10px;
+  }
+
+  .filters-container {
+      padding: 1rem;
+  }
+}
 /* Header Section Styles */
 .section-header {
     text-align: center;
@@ -133,6 +164,12 @@ body {
   max-width: min(800px, 90%);
   margin: clamp(30px, 6vh, 60px) auto;
   z-index: 10;
+}
+.search-container {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin-top: 2rem;
 }
 
 .search-container input {
@@ -166,13 +203,24 @@ body {
   opacity: 0.7;
   transform: translateX(5px);
 }
+.search-container input {
+  background: transparent;
+  color: #ffffff;
+}
 
+.search-container input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.search-icon {
+  color: #ffffff;
+}
 .search-icon {
   position: absolute;
   left: clamp(30px, 4vw, 40px);
   top: 50%;
   transform: translateY(-50%);
-  color: var(--accent-color);
+ 
   font-size: clamp(1.2rem, 2.5vw, 1.4rem);
   pointer-events: none;
   transition: all 0.3s ease;
@@ -186,7 +234,7 @@ body {
   transform: translateY(-50%);
   background: none;
   border: none;
-  color: #999;
+ 
   cursor: pointer;
   width: 40px;
   height: 40px;
@@ -299,9 +347,12 @@ body {
 
 /* Filter Section Styles */
 .filters-container {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 2rem;
+  margin: 2rem auto;
   max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
 }
 
 
@@ -314,6 +365,14 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
   margin-bottom: 30px;
+}
+.filters-container {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 1200px;
 }
 
 .filter-group {
@@ -339,13 +398,16 @@ body {
 .filter-option input {
   display: none;
 }
+.filter-group h3 {
+  color: #ffffff;
+}
 
 .option-card {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 15px;
-  background: #f8f9fa;
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 15px;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -354,19 +416,25 @@ body {
 .option-card i {
   font-size: 1.5rem;
   margin-bottom: 8px;
-  color: #666;
+ 
+  transition: all 0.3s ease;
+}
+.option-card {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
   transition: all 0.3s ease;
 }
 
+.option-card:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-3px);
+}
+
 .filter-option input:checked + .option-card {
-  background: var(--accent-color);
-  color: white;
+  background: linear-gradient(45deg, #e74c3c, #f39c12);
+  border-color: transparent;
 }
-
-.filter-option input:checked + .option-card i {
-  color: white;
-}
-
 .price-range-container {
   padding: 20px 0;
 }
@@ -412,11 +480,15 @@ input[type="range"]::-webkit-slider-thumb {
   gap: 10px;
   margin-top: 20px;
 }
+.price-labels span {
+  color: #ffffff;
+}
 
 .preset-btn {
   padding: 8px 15px;
-  background: #f8f9fa;
-  border: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 20px;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -424,7 +496,7 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 .preset-btn:hover {
-  background: var(--accent-color);
+  background: rgba(255, 255, 255, 0.2);
   color: white;
 }
 
@@ -437,8 +509,10 @@ input[type="range"]::-webkit-slider-thumb {
 
 .reset-btn {
   padding: 12px 25px;
-background-color: var(--accent-color);
-  border: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+ 
   border-radius: 25px;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -450,7 +524,7 @@ background-color: var(--accent-color);
 
 
 .reset-btn:hover {
-
+  background: rgba(255, 255, 255, 0.2);
   transform: translateY(-2px);
 }
 .reset-btn i {
