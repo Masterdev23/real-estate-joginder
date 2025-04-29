@@ -12,8 +12,8 @@
 .properties-hero {
   position: relative;
   min-height: 60vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-              url('../images/banner-prop-new.png') no-repeat center;
+  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+              url('../images/2.png') no-repeat center;
   background-size: cover;
   background-attachment: fixed;
   display: flex;
@@ -22,7 +22,9 @@
   padding: 4rem 1rem;
   overflow: hidden;
 }
-
+body{
+  margin: 0;
+}
 .properties-hero::before {
   content: '';
   position: absolute;
@@ -30,11 +32,7 @@
   left: 0;
   right: 0;
   height: 100%;
-  background: linear-gradient(
-      45deg,
-      rgba(231, 76, 60, 0.3),
-      rgba(243, 156, 18, 0.3)
-  );
+  
   z-index: 1;
 }
 
@@ -204,7 +202,7 @@
   position: absolute;
   top: 1rem;
   left: 1rem;
-  background: var(--accent-color);
+  background: rgb(20, 131, 20);
   color: white;
   padding: 0.5rem 1rem;
   border-radius: 20px;
@@ -291,7 +289,7 @@
 
 .section-subtitle {
   color: var(--accent-color);
-  font-size: 1.1rem;
+  font-size: 2.5rem;
   text-transform: uppercase;
   letter-spacing: 3px;
   display: block;
@@ -399,6 +397,9 @@
       grid-template-columns: 1fr;
       max-width: 400px;
       margin: 0 auto;
+  }
+  .section-subtitle{
+    font-size: 2rem;
   }
 }
 

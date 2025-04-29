@@ -24,7 +24,7 @@ export const properties = [
       bedrooms: 0,
       bathrooms: 2,
       area: 1500,
-      image: "../images/property-2.jpg",
+      image: "../images/bestech_park_view_grand_spa-sector_81_gurgaon-gurgaon-bestech_india_pvt_ltd_2.jpg",
       features: ["24/7 Security", "Power Backup", "Parking"]
   },
   {
@@ -38,7 +38,7 @@ export const properties = [
       bedrooms: 3,
       bathrooms: 3,
       area: 1800,
-      image: "../images/property-3.jpg",
+      image: "../images/dlf-camellias-gurgaon.webp",
       features: ["Club House", "Gym", "Children's Park"]
   }
   // Add more properties as needed

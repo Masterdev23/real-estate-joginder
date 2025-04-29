@@ -41,8 +41,8 @@ body {
 /* Main Properties Section */
 .main-properties {
   min-height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
-              url('../images/banner-prop-new.png') no-repeat center center fixed;
+  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+              url('../images/1.png') no-repeat center center fixed;
   background-size: cover;
   padding: 2rem 0;
 }
@@ -506,7 +506,9 @@ input[type="range"]::-webkit-slider-thumb:hover {
   overflow: hidden;
   transition: all 0.3s ease;
   position: relative;
+  box-shadow: var(--box-shadow);
 }
+
 
 .property-card:hover {
   transform: translateY(-10px);
@@ -537,20 +539,20 @@ input[type="range"]::-webkit-slider-thumb:hover {
 /* Property Content */
 .property-content {
   padding: 1.5rem;
-  color: #ffffff;
+ color: var(--primary-color);
 }
 
 .property-title {
   font-size: 1.4rem;
   margin-bottom: 0.5rem;
-  color: #ffffff;
+  color: var(--primary-color);
 }
 
 .property-location {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  color: rgba(255, 255, 255, 0.8);
+  color: var(--primary-color);
   margin-bottom: 1rem;
 }
 
