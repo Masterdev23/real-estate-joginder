@@ -20,7 +20,7 @@
 }
 
 .contact-main {
-  background: var(--gradient-primary);
+ 
   min-height: 100vh;
   overflow-x: hidden;
 }
@@ -107,7 +107,7 @@
 .card-icon {
   width: 70px;
   height: 70px;
-  background: var(--accent-color);
+  background: var(--secondary-color);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -161,7 +161,7 @@
 }
 
 .action-btn {
-  background: var(--accent-color);
+  background: var(--secondary-color);
   color: white;
   border: none;
   padding: 1rem;
@@ -176,7 +176,7 @@
 }
 
 .action-btn:hover {
-  background: var(--secondary-color);
+  background: var(--accent-color);
 }
 
 /* Responsive Design */
@@ -236,7 +236,7 @@
 
 /* Contact Info Side */
 .contact-info {
-  background: var(--primary-color);
+  background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
   border-radius: 20px;
   padding: 3rem 2rem;
   color: var(--text-light);
@@ -282,7 +282,7 @@
   font-weight: 700;
   display: block;
   margin-bottom: 0.5rem;
-  color: var(--accent-color);
+  color: var(--black);
 }
 
 /* Benefits Section */
@@ -307,7 +307,7 @@
 }
 
 .benefit-item i {
-  color: var(--secondary-color);
+  color: rgb(40, 139, 40);
 }
 
 /* Form Container */
@@ -458,7 +458,7 @@
 }
 
 .submit-btn {
-  background: var(--accent-color);
+  background: var(--secondary-color);
   color: white;
   padding: 1rem 2rem;
   border: none;
@@ -475,7 +475,7 @@
 }
 
 .submit-btn:hover {
-  background: var(--secondary-color);
+  background: var(--accent-color);
   transform: translateY(-2px);
 }
 
@@ -643,7 +643,7 @@
 /* Contact Form Section Adjustments */
 .contact-form-section {
   padding: 4rem 2rem;
-  background: var(--text-light);
+ 
   display: flex;
 }
 
@@ -653,7 +653,7 @@
   display: grid;
   grid-template-columns: 1fr 1.5fr;  /* Adjusted ratio */
   gap: 3rem;  /* Increased gap between info and form */
-  background: white;
+ 
   border-radius: 20px;
   overflow: hidden;
   box-shadow: var(--shadow-lg);

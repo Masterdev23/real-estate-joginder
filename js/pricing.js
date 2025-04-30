@@ -54,29 +54,90 @@ document.addEventListener('DOMContentLoaded', function() {
 /* filepath: /Users/vishalmohanta/real-estate-joginder/js/pricing.js */
 
 // Chat functionality
+// Chat functionality
 let isChatOpen = false;
-const botResponses = [
-    "Hi! How can I help you today?",
-    "I'd be happy to help you find your dream property!",
-    "Would you like to schedule a viewing?",
-    "Our agents are available 24/7 to assist you.",
-    "Can you tell me more about what you're looking for?",
-    "We have several properties that might interest you.",
-    "What's your preferred budget range?",
-    "Which area are you interested in?",
-    "We have properties ranging from apartments to luxury villas. What type interests you?",
-    "Would you like information about our financing options?",
-    "The average price per square foot in this area is $300. Does this fit your budget?",
-    "I can connect you with one of our real estate agents for more detailed information.",
-    "We offer virtual tours for all our properties. Would you like to schedule one?",
-    "Our properties come with various amenities like swimming pools, gardens, and security systems.",
-    "The current market trends show it's a great time to invest in real estate!",
-    "We also offer property management services. Would you like to learn more?",
-    "What's your preferred number of bedrooms?",
-    "Most of our properties are available for immediate possession.",
-    "We can arrange a private viewing at your convenient time.",
-    "Let me know if you need any specific details about our properties."
+
+// Structured response patterns with keywords
+const botResponsePatterns = [
+    {
+        keywords: ['hi', 'hello', 'hey', 'start', 'greetings'],
+        responses: [
+            "Hi! How can I help you today?",
+            "Hello! Welcome to Joginder Properties. How may I assist you?",
+            "Hi there! Looking for your dream property?"
+        ]
+    },
+    {
+        keywords: ['price', 'cost', 'budget', 'expensive', 'cheap', 'afford'],
+        responses: [
+            "Our properties range from $500,000 to $5,000,000. What's your budget range?",
+            "The average price per square foot in this area is $300. Does this fit your budget?",
+            "We have properties in various price ranges. What's your budget in mind?"
+        ]
+    },
+    {
+        keywords: ['bedroom', 'bath', 'rooms', 'size', 'sqft', 'square'],
+        responses: [
+            "We have properties from 1 to 6 bedrooms. How many bedrooms do you need?",
+            "Our properties range from 1000 to 5000 square feet. What size are you looking for?",
+            "Would you like to see our spacious family homes or cozy apartments?"
+        ]
+    },
+    {
+        keywords: ['location', 'area', 'where', 'place', 'neighborhood'],
+        responses: [
+            "We have properties in Beverly Hills, Downtown, and other prime locations. Any preference?",
+            "Which neighborhood interests you? We have properties across the city.",
+            "Popular areas include Beverly Hills, Hollywood Hills, and Santa Monica. Where would you like to live?"
+        ]
+    },
+    {
+        keywords: ['view', 'tour', 'visit', 'see', 'showing', 'schedule'],
+        responses: [
+            "I can schedule a viewing for you. Would you prefer a virtual tour or in-person visit?",
+            "We offer both virtual and in-person viewings. What works better for you?",
+            "Our agent can show you the property at your convenience. When would you like to visit?"
+        ]
+    },
+    {
+        keywords: ['agent', 'contact', 'representative', 'help'],
+        responses: [
+            "I'll connect you with one of our experienced agents. Please provide your contact number.",
+            "Our agents are available 24/7. Would you like someone to call you?",
+            "I can have an agent reach out to you. What's the best way to contact you?"
+        ]
+    },
+    {
+        keywords: ['amenities', 'features', 'facilities', 'include'],
+        responses: [
+            "Our properties come with premium amenities like pools, gyms, and security systems.",
+            "Common features include modern appliances, smart home systems, and landscaped gardens.",
+            "We offer properties with luxury amenities. What specific features are you looking for?"
+        ]
+    }
 ];
+
+const defaultResponses = [
+    "Can you tell me more about what you're looking for?",
+    "I'm here to help! What specific information do you need?",
+    "Let me know what aspects of the property interest you most.",
+    "Would you like information about our latest listings?"
+];
+
+function findResponse(message) {
+    // Convert message to lowercase and remove punctuation
+    const cleanMessage = message.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, "");
+    const words = cleanMessage.split(' ');
+
+    // Check each pattern for keyword matches
+    for (const pattern of botResponsePatterns) {
+        if (pattern.keywords.some(keyword => words.includes(keyword))) {
+            return pattern.responses[Math.floor(Math.random() * pattern.responses.length)];
+        }
+    }
+    
+    return defaultResponses[Math.floor(Math.random() * defaultResponses.length)];
+}
 
 function toggleChat() {
     const chatContainer = document.getElementById('chat-container');
@@ -84,7 +145,6 @@ function toggleChat() {
     chatContainer.classList.toggle('hidden');
     
     if (isChatOpen) {
-        // Initial bot message
         setTimeout(() => {
             addMessage("Hello! Welcome to Joginder Properties. How may I assist you today?", 'bot');
         }, 500);
@@ -99,13 +159,12 @@ function sendMessage() {
         addMessage(message, 'user');
         input.value = '';
         
-        // Simulate bot typing
         const typingIndicator = addTypingIndicator();
         
-        // Random response delay between 1-2 seconds
+        // Response delay between 1-2 seconds
         setTimeout(() => {
             removeTypingIndicator(typingIndicator);
-            const botResponse = botResponses[Math.floor(Math.random() * botResponses.length)];
+            const botResponse = findResponse(message);
             addMessage(botResponse, 'bot');
         }, 1000 + Math.random() * 1000);
     }
@@ -160,7 +219,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// Update the existing openChat function
+// Chat toggle function
 function openChat() {
     toggleChat();
 }
