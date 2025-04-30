@@ -43,13 +43,39 @@
         
  
         <!-- Hero Section-->
-        <section class="contact-hero">
-            <div class="hero-content" data-aos="fade-up">
-                <h1>Get in Touch</h1>
-                <p>We're here to help you find your perfect property</p>
+    <!-- Replace the existing hero section with this -->
+<section class="contact-hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content" data-aos="fade-up">
+      
+        <h1>Let's Make Your Real Estate Dreams Reality</h1>
+        <p>Our expert team is here to guide you through every step of your property journey</p>
+        <div class="hero-cta">
+            <a href="tel:+1234567890" class="cta-button primary">
+                <i class="fas fa-phone-alt"></i>
+                Call Now
+            </a>
+            <a href="#contact-form" class="cta-button secondary">
+                <i class="fas fa-envelope"></i>
+                Send Message
+            </a>
+        </div>
+        <div class="hero-stats">
+            <div class="stat-item">
+                <span class="stat-number">1000+</span>
+                <span class="stat-label">Properties Sold</span>
             </div>
-        </section>
-
+            <div class="stat-item">
+                <span class="stat-number">98%</span>
+                <span class="stat-label">Happy Clients</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">15+</span>
+                <span class="stat-label">Years Experience</span>
+            </div>
+        </div>
+    </div>
+</section>
         <!-- Contact Options Grid -->
         <section class="contact-options">
             <div class="options-container">
@@ -122,85 +148,146 @@
         </section>
 
         <!-- Contact Form Section -->
+       
         <section class="contact-form-section">
-          <div class="contact-wrapper">
-            <!-- Contact Info Side -->
-            <div class="contact-info" data-aos="fade-right">
-                <div class="info-content">
-                    <h3>Let's Talk</h3>
-                    <p class="info-desc">Have questions about our properties? Fill out the form and we'll be in touch soon.</p>
-                    
-                    <div class="contact-stats">
-                        <div class="stat-item">
-                            <span class="stat-number">1000+</span>
-                            <span class="stat-label">Properties Sold</span>
+            <div class="contact-container">
+                <!-- Left Side - Contact Info -->
+                <div class="contact-info-card" data-aos="fade-right">
+                    <div class="info-header">
+                        <span class="badge">Contact Us</span>
+                        <h2>Let's Start a Conversation</h2>
+                        <p>Get in touch with our expert team for personalized property solutions</p>
+                    </div>
+        
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="method-details">
+                                <h3>Call Us</h3>
+                                <p>24/7 Available</p>
+                                <a href="tel:+1234567890">+1 (234) 567-890</a>
+                            </div>
                         </div>
-                        <div class="stat-item">
-                            <span class="stat-number">98%</span>
-                            <span class="stat-label">Happy Clients</span>
+        
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="method-details">
+                                <h3>Email Us</h3>
+                                <p>Quick Response Time</p>
+                                <a href="mailto:info@joginderproperties.com">info@joginderproperties.com</a>
+                            </div>
                         </div>
-                        <div class="stat-item">
-                            <span class="stat-number">24/7</span>
-                            <span class="stat-label">Support</span>
+        
+                        <div class="contact-method">
+                            <div class="method-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="method-details">
+                                <h3>Visit Us</h3>
+                                <p>Mon-Fri: 9AM to 6PM</p>
+                                <address>123 Business Avenue, Suite 100, CA 90001</address>
+                            </div>
                         </div>
                     </div>
-    
-                    <div class="contact-benefits">
-                        <div class="benefit-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Expert Property Consultation</span>
-                        </div>
-                        <div class="benefit-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Free Property Valuation</span>
-                        </div>
-                        <div class="benefit-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Dedicated Support Team</span>
+        
+                    <div class="social-connect">
+                        <h3>Connect With Us</h3>
+                        <div class="social-icons">
+                            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="form-container" data-aos="fade-up">
-                <h2>Send us a Message</h2>
-                <form id="contactForm" class="contact-form">
-                    <div class="form-grid">
-                        <div class="form-group">
-                            <input type="text" id="name" required>
-                            <label for="name">Your Name</label>
+        
+                <!-- Right Side - Contact Form -->
+                <div class="contact-form-card" data-aos="fade-left">
+                    <form id="contactForm" class="modern-form">
+                        <div class="form-header">
+                            <h2>Send us a Message</h2>
+                            <p>Fill out the form below and we'll get back to you shortly</p>
                         </div>
-                        <div class="form-group">
-                            <input type="email" id="email" required>
-                            <label for="email">Email Address</label>
+        
+                        <div class="input-group">
+                            <div class="form-field">
+                                <input type="text" id="name" required>
+                                <label for="name">Full Name</label>
+                                <i class="fas fa-user"></i>
+                            </div>
+        
+                            <div class="form-field">
+                                <input type="email" id="email" required>
+                                <label for="email">Email Address</label>
+                                <i class="fas fa-envelope"></i>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <input type="tel" id="phone" required>
-                            <label for="phone">Phone Number</label>
+        
+                        <div class="input-group">
+                            <div class="form-field">
+                                <input type="tel" id="phone" required>
+                                <label for="phone">Phone Number</label>
+                                <i class="fas fa-phone"></i>
+                            </div>
+        
+                            <div class="form-field">
+                                <select id="inquiry" required>
+                                    <option value="" disabled selected>Select Inquiry Type</option>
+                                    <option value="buy">Looking to Buy</option>
+                                    <option value="sell">Looking to Sell</option>
+                                    <option value="rent">Looking to Rent</option>
+                                    <option value="other">Other Inquiry</option>
+                                </select>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <select id="subject" required>
-                                <option value="" disabled selected>Select Subject</option>
-                                <option value="general">General Inquiry</option>
-                                <option value="property">Property Viewing</option>
-                                <option value="pricing">Pricing Query</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-                        <div class="form-group full-width">
-                            <textarea id="message" rows="5" required></textarea>
+        
+                        <div class="form-field full-width">
+                            <textarea id="message" rows="4" required></textarea>
                             <label for="message">Your Message</label>
+                            <i class="fas fa-comment-alt"></i>
                         </div>
-                        <div class="form-group full-width">
-                            <button type="submit" class="submit-btn">
-                                Send Message
+        
+                        <div class="form-footer">
+                            <button type="submit" class="submit-button">
+                                <span>Send Message</span>
                                 <i class="fas fa-paper-plane"></i>
                             </button>
                         </div>
-                    </div>
-                </form>
+                        <div class="form-benefits">
+                            <h3>Why Choose Us</h3>
+                            <div class="benefits-grid">
+                                <div class="benefit-item">
+                                    <i class="fas fa-clock"></i>
+                                    <div class="benefit-content">
+                                        <h4>24/7 Support</h4>
+                                        <p>Always here when you need us</p>
+                                    </div>
+                                </div>
+                                <div class="benefit-item">
+                                    <i class="fas fa-shield-alt"></i>
+                                    <div class="benefit-content">
+                                        <h4>Secure Process</h4>
+                                        <p>Your information is safe with us</p>
+                                    </div>
+                                </div>
+                                <div class="benefit-item">
+                                    <i class="fas fa-heart"></i>
+                                    <div class="benefit-content">
+                                        <h4>Trusted by Many</h4>
+                                        <p>Thousands of satisfied clients</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
         </section>
-
         <!-- Map Section -->
         
         <section class="map-section" data-aos="fade-up">
