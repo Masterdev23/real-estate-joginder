@@ -7,16 +7,15 @@ document.addEventListener('DOMContentLoaded', function() {
   // Sample image data (replace with your actual images)
   const images = [
       '../images/jc-gellidon-GFUXPM7Hf6M-unsplash.jpg',
-      '../images/luxury villa.jpeg',
-      '../images/new-prop-banner.png',
+      '../images/dlf-camellias-gurgaon.webp',
+      '../images/bestech_park_view_grand_spa-sector_81_gurgaon-gurgaon-bestech_india_pvt_ltd_2.jpg',
       '../images/jc-gellidon-GFUXPM7Hf6M-unsplash.jpg',
       '../images/luxury villa.jpeg',
-      '../images/new-prop-banner.png',
-      '../images/new-prop-banner.png',
-      '../images/new-prop-banner.png',
-      '../images/new-prop-banner.png',
-      '../images/new-prop-banner.png',
-      '../images/new-prop-banner.png',
+      '../images/Bestech_Grand_view_Spa_-Banner.jpg',
+      '../images/DLF_new_photo_2_final_1738058267776_1738058276372.jpg',
+     '../images/jc-gellidon-GFUXPM7Hf6M-unsplash.jpg',
+     '../images/Bestech_Grand_view_Spa_-Banner.jpg',
+     '../images/bestech_park_view_grand_spa-sector_81_gurgaon-gurgaon-bestech_india_pvt_ltd_2.jpg',
   ];
 
   function clearGallery() {

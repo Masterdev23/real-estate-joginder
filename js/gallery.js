@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
   // Video Data
   const videoItems = [
       {
-          thumbnail: '../images/jogi-prop-banner-768px.png',
+          thumbnail: '../images/2.png',
           title: 'Modern Apartment Tour',
           description: 'Take a virtual walk through this stunning 3BHK apartment',
           videoUrl: '#'
