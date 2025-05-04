@@ -252,25 +252,59 @@ body{
   gap: 0.5rem;
   color: #666;
 }
-
-.view-details {
-  width: 100%;
-  padding: 1rem;
-  background: var(--secondary-color);
-  color: white;
-  border: none;
-  border-radius: 8px;
-  font-weight: 600;
-  cursor: pointer;
-  display: flex;
+/* Replace the existing view-details-btn styles with these */
+.view-details-btn {
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
   gap: 0.5rem;
-  transition: background 0.3s ease;
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  margin-top: 1.5rem;
+  padding: 0.5rem 0;
+  position: relative;
+  transition: all 0.3s ease;
 }
 
-.view-details:hover {
+.view-details-btn::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
   background: var(--accent-color);
+  transition: width 0.3s ease;
+}
+
+.view-details-btn:hover {
+  color: #2980b9;
+}
+
+.view-details-btn:hover::after {
+  width: 100%;
+}
+
+.view-details-btn i {
+  font-size: 0.9rem;
+  transition: transform 0.3s ease;
+  position: relative;
+  top: 1px;
+}
+
+.view-details-btn:hover i {
+  transform: translateX(8px);
+}
+
+/* Add this animation for a smoother effect */
+@keyframes arrowBounce {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(8px); }
+}
+
+.view-details-btn:hover i {
+  animation: arrowBounce 1s ease infinite;
 }
 
 /* Contact Section */

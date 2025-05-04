@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Details - Joginder Properties</title>
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/property-detail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+</head>
+<body>
+    <div id="navbar-placeholder"></div>
+
+    <main class="property-detail-main">
+        <!-- Loading State -->
+        <div id="loading-spinner" class="loading-container">
+            <div class="spinner"></div>
+            <p>Loading property details...</p>
+        </div>
+
+        <!-- Error State -->
+        <div id="error-container" class="error-container hidden"></div>
+
+        <!-- Property Content -->
+        <div id="property-content" class="property-content hidden">
+            <!-- Image Gallery -->
+            <section class="gallery-section">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper" id="gallery-container"></div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </section>
+
+            <!-- Property Overview -->
+            <div class="content-wrapper">
+                <section class="overview-section">
+                    <div class="property-header">
+                        <div class="title-area">
+                            <span class="status-badge" id="possession-status"></span>
+                            <h1 id="property-title"></h1>
+                            <p class="location" id="property-location"></p>
+                        </div>
+                        <div class="price-area">
+                            <h2 id="property-price"></h2>
+                            <p id="price-per-sqft"></p>
+                        </div>
+                    </div>
+                    
+                    <div class="property-meta">
+                        <div class="meta-item">
+                            <span class="label">Property ID:</span>
+                            <span id="property-id"></span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="label">RERA Number:</span>
+                            <span id="rera-number"></span>
+                        </div>
+                    </div>
+
+                    <div class="property-highlights" id="property-highlights"></div>
+                </section>
+
+                <!-- Description Section -->
+                <section class="description-section">
+                    <h2>About This Property</h2>
+                    <div id="property-description"></div>
+                    
+                    <div class="builder-info">
+                        <h3>About the Developer</h3>
+                        <div id="builder-description"></div>
+                    </div>
+
+                    <div class="landmarks">
+                        <h3>Nearby Landmarks</h3>
+                        <ul id="landmarks-list"></ul>
+                    </div>
+                </section>
+
+                <!-- Features Section -->
+                <section class="features-section">
+                    <h2>Features & Amenities</h2>
+                    <div class="features-grid" id="features-grid"></div>
+                </section>
+
+                <!-- Floor Plans Section -->
+                <section class="floor-plans-section">
+                    <h2>Floor Plans</h2>
+                    <div class="floor-plans-tabs" id="floor-plans-tabs"></div>
+                    <div class="floor-plan-view" id="floor-plan-view">
+                       
+                    </div>
+                </section>
+
+                <!-- Downloads Section -->
+                <section class="downloads-section">
+                    <h2>Downloads</h2>
+                    <div class="downloads-grid" id="downloads-grid"></div>
+                </section>
+
+                <!-- Contact Section -->
+                <section class="contact-section">
+                    <div class="quick-actions">
+                        <button class="action-btn schedule-btn">
+                            <i class="fas fa-calendar"></i>
+                            Schedule Visit
+                        </button>
+                        <a href="tel:+1234567890" class="action-btn call-btn">
+                            <i class="fas fa-phone"></i>
+                            Call Now
+                        </a>
+                        <a href="https://wa.me/1234567890" class="action-btn whatsapp-btn">
+                            <i class="fab fa-whatsapp"></i>
+                            WhatsApp
+                        </a>
+                    </div>
+
+                    <form id="inquiry-form" class="contact-form">
+                        <h3>Enquire Now</h3>
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required>
+                            <label for="name">Full Name</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="phone" name="phone" required>
+                            <label for="phone">Phone Number</label>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" required></textarea>
+                            <label for="message">Message</label>
+                        </div>
+                        <button type="submit" class="submit-btn">
+                            Send Enquiry <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </section>
+
+                <!-- External Links -->
+                <section class="external-links-section">
+                    <h2>Useful Links</h2>
+                    <div class="links-grid">
+                        <a href="#" id="google-maps-link" class="external-link">
+                            <i class="fas fa-map-marker-alt"></i>
+                            View on Google Maps
+                        </a>
+                        <a href="#" id="similar-properties-link" class="external-link">
+                            <i class="fas fa-building"></i>
+                            Similar Properties
+                        </a>
+                        <a href="#" id="builder-properties-link" class="external-link">
+                            <i class="fas fa-home"></i>
+                            More from this Builder
+                        </a>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script  src="../js/property-data.js"></script>
+    <script  src="../js/properties-detail.js"></script>
+</body>
+</html>
