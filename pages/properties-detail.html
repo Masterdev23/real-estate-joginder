@@ -18,9 +18,9 @@
             <div class="spinner"></div>
             <p>Loading property details...</p>
         </div>
-
+       
         <!-- Error State -->
-        <div id="error-container" class="error-container hidden"></div>
+      
 
         <!-- Property Content -->
         <div id="property-content" class="property-content hidden">
@@ -165,5 +165,27 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script  src="../js/property-data.js"></script>
     <script  src="../js/properties-detail.js"></script>
+    <script>
+        const swiper = new Swiper('.mySwiper', {
+  // ... existing options ...
+  on: {
+    init: function () {
+      updateCounter(this);
+    },
+    slideChange: function () {
+      updateCounter(this);
+    }
+  }
+});
+
+function updateCounter(swiper) {
+  const current = document.querySelector('.swiper-counter .current');
+  const total = document.querySelector('.swiper-counter .total');
+  if (current && total) {
+    current.textContent = swiper.realIndex + 1;
+    total.textContent = swiper.slides.length;
+  }
+}
+    </script>
 </body>
 </html>
