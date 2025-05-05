@@ -1,3 +1,5 @@
+
+/* Root Variables */
 :root {
   --primary-color: #2c3e50;
   --accent-color: #3498db;
@@ -15,12 +17,59 @@
   --transition: all 0.3s ease;
   --container-padding-mobile: 1rem;
   --container-padding-desktop: 2rem;
+  --section-spacing: 1.5rem;
 }
-*{
-  box-sizing: border-box;
+
+/* Base Styles and Layout */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  width: 100%;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  color: var(--text-dark);
+  background-color: var(--background-light);
+}
+
+.property-detail-main {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: var(--container-padding-mobile);
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.content-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--section-spacing);
+  margin-top: var(--section-spacing);
+}
+
+/* Common Section Styles */
+.section-common {
+  background: white;
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: var(--section-spacing);
+}
+
+.section-title {
+  font-size: 1.5rem;
+  color: var(--text-dark);
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
 /* Loading Spinner */
 .loading-spinner {
   position: fixed;
@@ -47,6 +96,129 @@
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+/* ... Your existing sections (Gallery Swiper through Contact Form) ... */
+
+/* Enhanced Responsive Design */
+@media (max-width: 480px) {
+  :root {
+      --section-spacing: 1rem;
+      --container-padding-mobile: 0.75rem;
+  }
+
+  .section-title {
+      font-size: 1.25rem;
+  }
+
+  .property-header {
+      padding: 1rem;
+  }
+
+  .features-grid,
+  .property-highlights,
+  .downloads-grid {
+      grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .features-grid,
+  .property-highlights {
+      grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 769px) {
+  .content-wrapper {
+      grid-template-columns: 2fr 1fr;
+      gap: 2rem;
+  }
+
+  .property-detail-main {
+      padding: var(--container-padding-desktop);
+  }
+
+  .gallery-section {
+      height: 500px;
+  }
+
+  .features-grid {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+@media (min-width: 1200px) {
+  .gallery-section {
+      height: 600px;
+  }
+
+  .content-wrapper {
+      gap: 3rem;
+  }
+
+  .features-grid {
+      grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) {
+  .feature-item:hover,
+  .doc-link:hover,
+  .external-link:hover {
+      transform: none;
+  }
+
+  .action-btn {
+      padding: 1rem 1.5rem;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .gallery-section,
+  .quick-actions,
+  .contact-form,
+  .download-btn,
+  .external-links-section {
+      display: none;
+  }
+
+  .content-wrapper {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+  }
+
+  .property-header {
+      break-after: avoid;
+  }
+
+  .description-section {
+      break-inside: avoid;
+  }
+}
+
+/* Safe Area Insets for Modern Devices */
+@supports (padding: env(safe-area-inset-left)) {
+  .property-detail-main {
+      padding-left: max(var(--container-padding-mobile), env(safe-area-inset-left));
+      padding-right: max(var(--container-padding-mobile), env(safe-area-inset-right));
+  }
+}
+
+/* Utility Classes */
+.hidden {
+  display: none;
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 /* Gallery Swiper */
