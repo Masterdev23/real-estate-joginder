@@ -16,7 +16,11 @@
   --container-padding-mobile: 1rem;
   --container-padding-desktop: 2rem;
 }
-
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 /* Loading Spinner */
 .loading-spinner {
   position: fixed;
