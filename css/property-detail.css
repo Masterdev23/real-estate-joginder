@@ -534,6 +534,7 @@ body {
 	padding: 1.5rem;
 	border-radius: var(--border-radius);
 	box-shadow: var(--shadow-sm);
+  margin-bottom: 1.5rem;
 }
 .quick-actions {
 	display: grid;
@@ -581,7 +582,7 @@ body {
 	font-weight: 500;
 }
 .form-group input,.form-group textarea {
-	width: 100%;
+	width: 95%;
 	padding: 0.75rem 1rem;
 	border: 2px solid var(--background-light);
 	border-radius: var(--border-radius);
@@ -773,6 +774,11 @@ body {
 	.links-grid {
 		grid-template-columns: repeat(3, 1fr);
 	}
+  .property-meta{
+    grid-template-columns: repeat(3, 1fr);
+    
+
+  }
 }
 /* Print styles for links */
 @media print {
