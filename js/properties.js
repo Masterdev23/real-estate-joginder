@@ -251,43 +251,50 @@ updateActiveFilters() {
         }
 
         this.propertiesContainer.innerHTML = properties.map(property => `
-           <div class="property-card" data-aos="fade-up">
+            <div class="property-card" data-aos="fade-up">
             <div class="property-image">
                 <img src="${property.image || './images/placeholder.jpg'}" alt="${property.title}" onerror="this.onerror=null; this.src='./images/placeholder.jpg';">
                 <span class="property-tag">${property.status}</span>
             </div>
-                <div class="property-content">
-                    <h3 class="property-title">${property.title}</h3>
-                    <div class="property-location">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span>${property.location}</span>
-                    </div>
-                    <p class="property-description">${property.description}</p>
-                    <div class="property-features">
-                        ${property.features.map(feature => 
-                            `<span class="feature-tag">${feature}</span>`
-                        ).join('')}
-                    </div>
-                    <div class="property-specs">
-                        ${property.bedrooms ? `
-                            <div class="spec-item">
-                                <i class="fas fa-bed"></i>
-                                <span>${property.bedrooms} Beds</span>
-                            </div>
-                        ` : ''}
-                        <div class="spec-item">
-                            <i class="fas fa-bath"></i>
-                            <span>${property.bathrooms} Baths</span>
-                        </div>
-                        <div class="spec-item">
-                            <i class="fas fa-vector-square"></i>
-                            <span>${property.area} sq ft</span>
-                        </div>
-                    </div>
-                    <div class="property-price">₹${this.formatPrice(property.price)}</div>
+            <div class="property-content">
+                <h3 class="property-title">${property.title}</h3>
+                <div class="property-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>${property.location}</span>
                 </div>
+                <p class="property-description">${property.description}</p>
+                <div class="property-features">
+                ${property.features.map((feature, index) => 
+                    `<span class="feature-tag" 
+                           data-feature="${feature}" 
+                           style="--index: ${index}">
+                        ${feature}
+                    </span>`
+                ).join('')}
+                </div>
+                <div class="property-specs">
+                    ${property.bedrooms ? `
+                        <div class="spec-item">
+                            <i class="fas fa-bed"></i>
+                            <span>${property.bedrooms} Beds</span>
+                        </div>
+                    ` : ''}
+                    <div class="spec-item">
+                        <i class="fas fa-bath"></i>
+                        <span>${property.bathrooms} Baths</span>
+                    </div>
+                    <div class="spec-item">
+                        <i class="fas fa-vector-square"></i>
+                        <span>${property.area} sq ft</span>
+                    </div>
+                </div>
+                <div class="property-price">₹${this.formatPrice(property.price)}</div>
+                <a href="properties-detail.html?id=${property.id}" class="view-details-btn">
+                    View Details <i class="fas fa-arrow-right"></i>
+                </a>
             </div>
-        `).join('');
+        </div>
+    `).join('');
     }
 
     clearFilter(filterType) {

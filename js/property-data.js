@@ -97,103 +97,77 @@ const propertyData = {
     }
 },
 
-    '102': {
-        title: 'M3M Golf Estate',
-        location: 'Sector 65, Golf Course Extension Road, Gurugram',
-        price: '₹4.25 Cr',
-        pricePerSqft: '₹15,500/sq.ft',
-        propertyId: 'M3M-102',
-        reraNumber: 'RERA2023102HR',
-        possessionStatus: 'Ready to Move',
-        images: [
-            '../images/m3m-golf-estate-1.jpg',
-            '../images/m3m-golf-estate-2.jpg',
-            '../images/m3m-golf-estate-3.jpg'
-        ],
-        highlights: [
-            { icon: 'bed', label: 'Bedrooms', value: '4' },
-            { icon: 'bath', label: 'Bathrooms', value: '4' },
-            { icon: 'vector-square', label: 'Super Area', value: '2745 sq.ft' },
-            { icon: 'car', label: 'Parking', value: '2' },
-            { icon: 'building', label: 'Floor', value: '15th' }
-        ],
-        description: `Luxurious 4-bedroom apartment in M3M Golf Estate offering breathtaking views of the golf course. 
-        Features include Italian marble flooring, modular kitchen with premium appliances, VRV air-conditioning, and 
-        home automation. The apartment comes with high-end finishes and premium fixtures.`,
-        
-        builderInfo: `M3M India is one of the fastest growing real estate developers in India. With over a decade 
-        of experience, they have delivered multiple luxury residential and commercial projects in Gurugram. Their 
-        commitment to quality and innovation has made them a trusted name in real estate.`,
-        
-        nearbyLandmarks: [
-            'Golf Course Extension Road - 0 km',
-            'Sector 65 Metro Station - 1.5 km',
-            'Artemis Hospital - 3 km',
-            'Sapphire Mall - 1 km',
-            'DPS International School - 2 km',
-            'South Point Mall - 2.5 km'
-        ],
-        
-        features: [
-            { icon: 'golf-ball', name: 'Golf Course View' },
-            { icon: 'swimming-pool', name: 'Infinity Pool' },
-            { icon: 'dumbbell', name: 'Fitness Center' },
-            { icon: 'shield-alt', name: '24x7 Security' },
-            { icon: 'basketball-ball', name: 'Sports Court' },
-            { icon: 'spa', name: 'Spa & Sauna' },
-            { icon: 'child', name: 'Kids Play Area' },
-            { icon: 'music', name: 'Club House' },
-            { icon: 'car-side', name: 'Valet Parking' },
-            { icon: 'camera', name: 'CCTV Surveillance' }
-        ],
-        
-        floorPlans: [
-            {
-                name: 'Master Plan',
-                image: '../images/floor-plans/m3m-master.jpg',
-                downloadUrl: '../docs/m3m-master-plan.pdf'
-            },
-            {
-                name: '4 BHK Type A',
-                image: '../images/floor-plans/m3m-4bhk-a.jpg',
-                downloadUrl: '../docs/m3m-4bhk-a.pdf'
-            },
-            {
-                name: '4 BHK Type B',
-                image: '../images/floor-plans/m3m-4bhk-b.jpg',
-                downloadUrl: '../docs/m3m-4bhk-b.pdf'
-            }
-        ],
-        
-        documents: [
-            { 
-                type: 'brochure', 
-                name: 'Project Brochure', 
-                url: '../docs/m3m-brochure.pdf', 
-                size: '5.2 MB' 
-            },
-            { 
-                type: 'price', 
-                name: 'Price Sheet', 
-                url: '../docs/m3m-price.pdf', 
-                size: '1.8 MB' 
-            },
-            { 
-                type: 'rera', 
-                name: 'RERA Certificate', 
-                url: '../docs/m3m-rera.pdf', 
-                size: '1.2 MB' 
-            }
-        ],
-        
-        googleMapsUrl: 'https://goo.gl/maps/M3MGolfEstate',
-        similarProperties: ['101', '103', '104'],
-        builderProperties: ['102', '105', '106'],
-        
-        contact: {
-            phone: '+91 9876543210',
-            whatsapp: '+91 9876543210',
-            email: 'sales@m3mindia.com'
+   '102': {
+    title: 'Premium Residential Plots Indore',
+    location: 'Indore-Ujjain Highway (Sahana), Indore',
+    price: '₹1.5 Lakh EOI onwards',
+    pricePerSqft: 'TBD',
+    propertyId: 'PROP102',
+    reraNumber: 'TBD',
+    possessionStatus: 'Pre-Launch',
+    images: [
+        '../images/godrejindoreplots-indore.png',
+        '../propassets/images/indore-plot-2.jpg',
+        '../propassets/images/indore-plot-3.jpg',
+        '../propassets/images/indore-plot-4.jpg',
+        '../propassets/images/indore-plot-5.jpg'
+    ],
+    highlights: [
+        { icon: 'map', label: 'Plot Sizes', value: '1000, 1250, 1500 sq.ft' },
+        { icon: 'leaf', label: 'Living', value: 'Resort-style Vastu-compliant plots' },
+        { icon: 'landmark', label: 'Developer Grade', value: '1st A+ Grade Developer on Indore-Ujjain Highway' }
+    ],
+    description: `Premium 46-acre plotted development located strategically on the Indore-Ujjain Highway. A one-time opportunity to own Vastu-compliant plots with resort-style amenities and excellent connectivity to airport, metro, IIT, IIM, and key highways.`,
+    
+    builderInfo: `One of the first A+ Grade developers on the Indore-Ujjain Highway corridor, committed to developing luxury, high-value plotted townships integrated with urban infrastructure and sustainable living.`,
+
+    nearbyLandmarks: [
+        'Indore International Airport',
+        'Railway Station',
+        'IIT & IIM Indore',
+        'Prestige University',
+        'Indore-Ujjain Metro Corridor',
+        'Indore-Ujjain 6-Lane Highway',
+        'Ahilyapath Express Connectivity',
+        'Upcoming 300+ Luxury Hotels',
+        'Largest Theme Park in Indore'
+    ],
+
+    features: [
+        { icon: 'building', name: 'Clubhouse' },
+        { icon: 'basketball-ball', name: 'Sports Facilities' },
+        { icon: 'child', name: 'Kids’ Zone' },
+        { icon: 'tree', name: 'Green Living Spaces' },
+        { icon: 'seedling', name: 'Theme Garden' }
+    ],
+
+    floorPlans: [],
+
+    documents: [
+        {
+            type: 'brochure',
+            name: 'Project Brochure',
+            url: '../docs/indore-premium-plots-brochure.pdf',
+            size: '3.5 MB'
+        },
+        {
+            type: 'price',
+            name: 'EOI Price Sheet',
+            url: '../docs/indore-premium-plots-pricing.pdf',
+            size: '1.2 MB'
         }
+    ],
+
+    googleMapsUrl: 'https://goo.gl/maps/IndoreUjjainPlots',
+
+    similarProperties: ['201', '202', '203'],
+    builderProperties: ['102', '106', '108'],
+
+    contact: {
+        phone: '9818223938',
+        whatsapp: '9818223938',
+        email: 'joginderpropertiesreal26@gmail.com'
     }
+}
+
 };
