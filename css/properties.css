@@ -590,6 +590,7 @@ input[type="range"]::-webkit-slider-thumb:hover {
   background: rgba(231, 76, 60, 0.1);
   border-radius: 12px;
   border-left: 3px solid #e74c3c;
+  color: #ffffff;
 }
 
 .property-location i {
@@ -661,6 +662,7 @@ input[type="range"]::-webkit-slider-thumb:hover {
   color: #e74c3c;
   display: flex;
   align-items: baseline;
+  font-weight: 600;
   gap: 8px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -869,6 +871,7 @@ input[type="range"]::-webkit-slider-thumb:hover {
     background: linear-gradient(145deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
     border-radius: 20px;
     border: 1px solid rgba(231, 76, 60, 0.1);
+    color: white;
 }
 
 .spec-item {
@@ -1105,7 +1108,7 @@ input[type="range"]::-webkit-slider-thumb:hover {
   border: 1px solid rgba(255, 255, 255, 0.1);
   color: white;
   width: 80vw;
-  margin-left: 50px~;
+  margin-left: 50px;
 }
 
 .shape-decoration {
