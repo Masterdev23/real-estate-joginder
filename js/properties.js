@@ -289,10 +289,11 @@ updateActiveFilters() {
                     </div>
                 </div>
                 <div class="property-price">₹${this.formatPrice(property.price)}</div>
-                <a href="properties-detail.html?id=${property.id}" class="view-details-btn">
+               
+            </div>
+             <a href="properties-detail.html?id=${property.id}" class="view-details-btn">
                     View Details <i class="fas fa-arrow-right"></i>
                 </a>
-            </div>
         </div>
     `).join('');
     }

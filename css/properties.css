@@ -491,8 +491,6 @@ input[type="range"]::-webkit-slider-thumb:hover {
   padding: 0 clamp(1rem, 3vw, 2rem);
 }
 
-
-/* Modern Property Card */
 /* Enhanced Property Card */
 .property-card {
   position: relative;
@@ -678,7 +676,7 @@ input[type="range"]::-webkit-slider-thumb:hover {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  width: 80%;
   padding: 1rem 2rem;
   background: linear-gradient(135deg, #e74c3c, #c0392b);
   border: none;
@@ -690,7 +688,8 @@ input[type="range"]::-webkit-slider-thumb:hover {
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
-  margin-top: 1.5rem;
+margin-bottom: 1.5rem;
+margin-left: 60px;
 }
 
 .view-details-btn::before {
@@ -765,6 +764,7 @@ input[type="range"]::-webkit-slider-thumb:hover {
     .view-details-btn {
         padding: 0.875rem 1.5rem;
         font-size: 1rem;
+        margin-left: 40px;
     }
 }
 
