@@ -7,7 +7,6 @@ export const properties = [
       location: 'Sector 65, Golf Course Extension Road, Gurgaon',
       description: 'Luxury 3 & 4 BHK apartments with world-class amenities in the heart of Gurgaon. Features premium finishes, smart home automation, and stunning golf course views.',
       price: 38500000, // 3.85 Cr
-      pricePerSqft: 23000,
       area: 1679,
       bedrooms: '3',
       bathrooms: '3',
@@ -16,6 +15,7 @@ export const properties = [
           'Club House',
           'Swimming Pool',
           'Gym',
+          '24/7 Security',
           '24/7 Security'
       ],
       image: '../propassets/images/WhatsApp Image 2025-05-04 at 22.53.16_0518588e.jpg',
@@ -59,7 +59,6 @@ export const properties = [
       location: 'Sector 43, Noida',
       description: 'Premium 3 & 4 BHK apartments surrounded by 600+ trees. Offering sustainable living with modern amenities and excellent connectivity.',
       price: 25000000, // 2.5 Cr
-      pricePerSqft: 12500,
       area: 2000,
       bedrooms: '3',
       bathrooms: '3',

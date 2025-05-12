@@ -688,8 +688,8 @@ input[type="range"]::-webkit-slider-thumb:hover {
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
-margin-bottom: 1.5rem;
-margin-left: 60px;
+ margin-bottom: 1.5rem;
+ margin-left: 60px;
 }
 
 .view-details-btn::before {
