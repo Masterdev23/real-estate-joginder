@@ -6,16 +6,29 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Sample image data (replace with your actual images)
   const images = [
-      '../images/jc-gellidon-GFUXPM7Hf6M-unsplash.jpg',
-      '../images/dlf-camellias-gurgaon.webp',
-      '../images/bestech_park_view_grand_spa-sector_81_gurgaon-gurgaon-bestech_india_pvt_ltd_2.jpg',
-      '../images/jc-gellidon-GFUXPM7Hf6M-unsplash.jpg',
-      '../images/luxury villa.jpeg',
-      '../images/Bestech_Grand_view_Spa_-Banner.jpg',
-      '../images/DLF_new_photo_2_final_1738058267776_1738058276372.jpg',
-     '../images/jc-gellidon-GFUXPM7Hf6M-unsplash.jpg',
-     '../images/Bestech_Grand_view_Spa_-Banner.jpg',
-     '../images/bestech_park_view_grand_spa-sector_81_gurgaon-gurgaon-bestech_india_pvt_ltd_2.jpg',
+      '../propassets/images/IMG-20250504-WA0026.jpg',
+      '../propassets/images/IMG-20250504-WA0027.jpg',
+      '../propassets/images/IMG-20250504-WA0028.jpg',
+      '../propassets/images/IMG-20250504-WA0029.jpg',
+      '../propassets/images/IMG-20250504-WA0030.jpg',
+      '../propassets/images/IMG-20250504-WA0031.jpg',
+      '../propassets/images/IMG-20250504-WA0032.jpg',
+      '../propassets/images/IMG-20250504-WA0033.jpg',
+      '../propassets/images/IMG-20250504-WA0034.jpg',
+      '../propassets/images/IMG-20250504-WA0035.jpg',
+      '../propassets/images/IMG-20250504-WA0036.jpg',
+      '../propassets/images/Gokulam The Sanctuary luxury Floor.pdf-image-013.jpg',
+      '../propassets/images/Gokulam The Sanctuary luxury Floor.pdf-image-001.png',
+      '../propassets/images/Gokulam The Sanctuary luxury Floor.pdf-image-009.jpg',
+      '../propassets/images/Gokulam The Sanctuary luxury Floor.pdf-image-024.jpg',
+      '../propassets/images/The Palatial - Brochure Presentation - 042025.pdf-image-015.jpg',
+      '../propassets/images/The Palatial - Brochure Presentation - 042025.pdf-image-062.jpg',
+      '../propassets/images/The Palatial - Brochure Presentation - 042025.pdf-image-068.png',
+      '../propassets/images/The Palatial - Brochure Presentation - 042025.pdf-image-077 (1).jpg',
+      '../propassets/images/The Palatial - Brochure Presentation - 042025.pdf-image-081.jpg',
+      '../propassets/images/The Palatial - Brochure Presentation - 042025.pdf-image-103.jpg',
+      '../propassets/images/The Palatial - Brochure Presentation - 042025.pdf-image-131.jpg',
+
   ];
 
   function clearGallery() {
