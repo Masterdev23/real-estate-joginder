@@ -98,70 +98,85 @@ const propertyData = {
 },
 
    '102': {
-    title: 'Premium Residential Plots Indore',
-    location: 'Indore-Ujjain Highway (Sahana), Indore',
-    price: '₹1.5 Lakh EOI onwards',
-    pricePerSqft: 'TBD',
-    propertyId: 'PROP102',
-    reraNumber: 'TBD',
-    possessionStatus: 'Pre-Launch',
+    title: 'Gokulam The Sanctuary Luxury Floors',
+    location: 'Sohna, South of Gurugram',
+    price: 'Starting from ₹1.25 Cr',
+    
+    pricePerSqft: '1650sq.ft',
+    propertyId: 'RERA-GRG-PROJ-1715-2024',
+    reraNumber: 'RC/REP/HARERA/GGM/892/624/2024/119',
+    possessionStatus: 'Upcoming',
     images: [
-        '../images/godrejindoreplots-indore.png',
-        '../propassets/images/indore-plot-2.jpg',
-        '../propassets/images/indore-plot-3.jpg',
-        '../propassets/images/indore-plot-4.jpg',
-        '../propassets/images/indore-plot-5.jpg'
+        '../propassets/images/Gokulam The Sanctuary luxury Floor.pdf-image-013.jpg',
+      '../propassets/images/Gokulam The Sanctuary luxury Floor.pdf-image-001.png',
+      '../propassets/images/Gokulam The Sanctuary luxury Floor.pdf-image-009.jpg',
+      '../propassets/images/Gokulam The Sanctuary luxury Floor.pdf-image-024.jpg',
+      '../propassets/images/Gokulam The Sanctuary luxury Floor.pdf-image-023.jpg',
+'../propassets/images/Gokulam The Sanctuary luxury Floor.pdf-image-024 (1).jpg',
+'../propassets/images/Gokulam The Sanctuary luxury Floor.pdf-image-027.jpg',
+
     ],
     highlights: [
-        { icon: 'map', label: 'Plot Sizes', value: '1000, 1250, 1500 sq.ft' },
-        { icon: 'leaf', label: 'Living', value: 'Resort-style Vastu-compliant plots' },
-        { icon: 'landmark', label: 'Developer Grade', value: '1st A+ Grade Developer on Indore-Ujjain Highway' }
+        { icon: 'home', label: 'Configuration', value: 'Luxurious 3-Bedroom Suites' },
+        { icon: 'couch', label: 'Furnishing', value: 'Fitted Wardrobes, Modular Kitchen, Air Conditioning' },
+        { icon: 'dumbbell', label: 'Amenities', value: 'Sports Arena, Nature Club, Open Gym' }
     ],
-    description: `Premium 46-acre plotted development located strategically on the Indore-Ujjain Highway. A one-time opportunity to own Vastu-compliant plots with resort-style amenities and excellent connectivity to airport, metro, IIT, IIM, and key highways.`,
-    
-    builderInfo: `One of the first A+ Grade developers on the Indore-Ujjain Highway corridor, committed to developing luxury, high-value plotted townships integrated with urban infrastructure and sustainable living.`,
+    description: `Located in the lap of the Aravallis, Gokulam The Sanctuary offers spacious luxury floors in Sohna, South of Gurugram. The property features elegant interiors with premium fittings, fitted wardrobes, modular kitchens, and private lift access. It also includes a state-of-the-art sports arena, nature club, and open gym for a holistic lifestyle.`,
+
+    builderInfo: `Gokulam presents premium low-rise luxury floors designed with elegance and comfort in mind. Backed by high-quality construction, modern architecture, and wellness-oriented facilities, the project ensures a sophisticated lifestyle in harmony with nature.`,
 
     nearbyLandmarks: [
-        'Indore International Airport',
-        'Railway Station',
-        'IIT & IIM Indore',
-        'Prestige University',
-        'Indore-Ujjain Metro Corridor',
-        'Indore-Ujjain 6-Lane Highway',
-        'Ahilyapath Express Connectivity',
-        'Upcoming 300+ Luxury Hotels',
-        'Largest Theme Park in Indore'
+        'South of Gurugram',
+        'Aravalli Hills',
+        'Upcoming Commercial Zones',
+        'International Schools & Colleges',
+        'Proposed Metro Corridor',
+        'KMP Expressway',
+        'Delhi-Mumbai Industrial Corridor'
     ],
 
     features: [
-        { icon: 'building', name: 'Clubhouse' },
-        { icon: 'basketball-ball', name: 'Sports Facilities' },
-        { icon: 'child', name: 'Kids’ Zone' },
-        { icon: 'tree', name: 'Green Living Spaces' },
-        { icon: 'seedling', name: 'Theme Garden' }
+        { icon: 'volleyball-ball', name: 'Volley Ball Court' },
+        { icon: 'tennis-ball', name: 'Lawn Tennis Court' },
+        { icon: 'basketball-ball', name: 'Basketball Court' },
+        { icon: 'cricket', name: 'Cricket Practice Nets' },
+        { icon: 'skating', name: 'Skating Rink' },
+        { icon: 'coffee', name: 'Coffee Shop' },
+        { icon: 'spa', name: 'Sun Deck & Pergola' },
+        { icon: 'spa', name: 'Nature & Herbal Park' },
+        { icon: 'leaf', name: 'Organic & Medicinal Garden' },
+        { icon: 'tree', name: 'Barefoot Walking Park' },
+        { icon: 'users', name: 'Senior Citizen Sitout' },
+        { icon: 'dumbbell', name: 'Gym & Banquet Hall' }
     ],
 
-    floorPlans: [],
+    floorPlans: [
+        {
+            name: '3 BHK Floor Plan',
+            image: '../propassets/images/Full plan gokulam.png',
+            downloadUrl: '../propassets/images/Full plan gokulam.png'
+        }
+    ],
 
     documents: [
         {
             type: 'brochure',
             name: 'Project Brochure',
-            url: '../docs/indore-premium-plots-brochure.pdf',
-            size: '3.5 MB'
+            url: '../propassets/links/Gokulam The Sanctuary luxury Floor.pdf',
+            size: 'TBD'
         },
         {
-            type: 'price',
-            name: 'EOI Price Sheet',
-            url: '../docs/indore-premium-plots-pricing.pdf',
-            size: '1.2 MB'
+            type: 'payment Plan',
+            name: 'Payment Plan',
+            url: '../propassets/images/WhatsApp Image 2025-05-03 at 10.50.18_09cb4ada.jpg',
+            size: 'TBD'
         }
     ],
 
-    googleMapsUrl: 'https://goo.gl/maps/IndoreUjjainPlots',
+    googleMapsUrl: 'https://goo.gl/maps/GokulamSanctuarySohna',
 
-    similarProperties: ['201', '202', '203'],
-    builderProperties: ['102', '106', '108'],
+    similarProperties: ['102', '106', '108'],
+    builderProperties: ['104', '110', '115'],
 
     contact: {
         phone: '9818223938',

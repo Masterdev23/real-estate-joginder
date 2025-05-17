@@ -279,8 +279,8 @@ body{
 /* Features Section */
 .features-row {
     display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
+    flex-direction: row;
+    gap: 0.50rem;
     padding: 1rem 0;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
