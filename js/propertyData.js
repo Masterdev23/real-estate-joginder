@@ -46,12 +46,36 @@ export const properties = [
   propertyId: 'PROP104',
   reraNumber: null // RERA not mentioned in the provided data
 },
+{
+id: '103',
+title: 'Velvet Vista Premium Service Apartments',
+type: 'residential',
+status: 'Upcoming',
+location: 'Porvorim, North Goa',
+description: 'Introducing premium service apartments in the heart of Goa. Studio, 1 & 2 BHK units available with attractive 25:25:25:25 payment plan and 12% assured annual rent till possession.',
+price: 9687000, // ₹96.87 Lakhs Onwards
+area: null,  // Area not specified in the image
+bedrooms: 'Studio, 1 & 2 BHK',
+bathrooms: null,  // Bathroom count not mentioned
+features: [
+  'Service Apartments',
+  'Located in Porvorim, North Goa',
+  '25:25:25:25 Payment Plan',
+  '12% Assured Rent Per Annum',
+  'Till Possession Offer',
+  'Studio, 1 & 2 BHK Options'
+],
+image: '../propassets/images/VELVET VISTA BROCHURE.pdf-image-058.jpg',
+propertyId: 'PROP105',
+reraNumber: null // RERA not mentioned in the provided data
+
+}
 
 ];
 
 // Price range configuration for filters
 export const priceRangeConfig = {
-  min: 10000000,  // 2 Cr
+  min: 5000000,  //  50 lakh
   max: 200000000, // 20 Cr
   step: 1000000   // 10 L
 };
