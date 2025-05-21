@@ -342,16 +342,22 @@ const propertyData = {
     ],
     
     floorPlans: [
-        {
+         {
+            name: 'Master Layout',
+            image: '../propassets/images/The Palatial - Brochure Presentation - 042025.pdf-image-137.png',
+            downloadUrl: '../propassets/images/The Palatial - Brochure Presentation - 042025.pdf-image-137.png'
+        },
+         {
             name: '3 BHK + SPR Floor Plan',
-            image: '../palatial/3bhk-spr-layout.jpg',
-            downloadUrl: '../palatial/3bhk-spr-layout.jpg'
+            image: '../propassets/images/The Palatial - Brochure Presentation - 042025.pdf-image-145.png',
+            downloadUrl: '../propassets/images/The Palatial - Brochure Presentation - 042025.pdf-image-145.png'
         },
         {
             name: '4 BHK + SPR Floor Plan',
-            image: '../palatial/4bhk-spr-layout.jpg',
-            downloadUrl: '../palatial/4bhk-spr-layout.jpg'
+            image: '../propassets/images/The Palatial - Brochure Presentation - 042025.pdf-image-142.png',
+            downloadUrl: '../propassets/images/The Palatial - Brochure Presentation - 042025.pdf-image-142.png'
         }
+       
     ],
     
     documents: [
@@ -359,8 +365,16 @@ const propertyData = {
             type: 'brochure',
             name: 'The Palatial Brochure',
             url: '../propassets/images/The Palatial - Brochure Presentation - 042025.pdf',
-            size: '10 MB'
-        }
+            size: '9.8 MB'
+        },
+        {
+            type: 'payment Plan',
+            name: 'Payment Plan',
+            url: '../propassets/images/WhatsApp Image 2025-05-03 at 10.45.04_962ff0eb.jpg',
+            size: '92.8 KB'
+        },
+   
+       
     ],
     
     googleMapsUrl: 'https://goo.gl/maps/Xf1RWmnzPUHjjXRM9', // Example placeholder
