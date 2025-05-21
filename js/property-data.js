@@ -184,82 +184,188 @@ const propertyData = {
         email: 'joginderpropertiesreal26@gmail.com'
     }
 },
-'103': {
-    title: 'Velvet Vista Premium Service Apartments',
-    location: 'Porvorim, North Goa',
-    price: '₹96.87 Lakhs onwards',
+    '103': {
+        title: 'Velvet Vista Premium Service Apartments',
+        location: 'Porvorim, North Goa',
+        price: '₹96.87 Lakhs onwards',
+        pricePerSqft: null, // Not specified in brochure
+        propertyId: 'PROP101',
+        reraNumber: null, // RERA not mentioned
+        possessionStatus: 'Upcoming',
+        images: [
+        '../vell-vista/VELVET VISTA BROCHURE.pdf-image-000.jpg',
+        '../vell-vista/VELVET VISTA BROCHURE.pdf-image-002.jpg',
+        '../vell-vista/VELVET VISTA BROCHURE.pdf-image-005.jpg',
+        '../vell-vista/VELVET VISTA BROCHURE.pdf-image-054.jpg',
+        '../vell-vista/VELVET VISTA BROCHURE.pdf-image-055.jpg',
+        '../vell-vista/VELVET VISTA BROCHURE.pdf-image-054.jpg',
+        '../vell-vista/VELVET VISTA BROCHURE.pdf-image-055.jpg',
+        '../vell-vista/VELVET VISTA BROCHURE.pdf-image-056.jpg',
+        '../vell-vista/VELVET VISTA BROCHURE.pdf-image-057.jpg',
+        '../vell-vista/VELVET VISTA BROCHURE.pdf-image-058.jpg',
+        '../vell-vista/VELVET VISTA BROCHURE.pdf-image-059.jpg',
+        '../vell-vista/VELVET VISTA BROCHURE.pdf-image-062.jpg',
+        '../vell-vista/VELVET VISTA BROCHURE.pdf-image-058.jpg',
+        '../vell-vista/VELVET VISTA BROCHURE.pdf-image-059.jpg',
+        '../vell-vista/VELVET VISTA BROCHURE.pdf-image-060.jpg',
+        '../vell-vista/VELVET VISTA BROCHURE.pdf-image-062.jpg',
+        ],
+        highlights: [
+            { icon: 'bed', label: 'Bedrooms', value: 'Studio, 1 & 2 BHK' },
+            { icon: 'bath', label: 'Bathrooms', value: null },
+            { icon: 'vector-square', label: 'Area', value: null }
+        ],
+        description: 'Velvet Vista offers premium service apartments in the heart of North Goa. Choose from Studio, 1 & 2 BHK units with assured rental income and an attractive 25:25:25:25 payment plan.',
+        
+        builderInfo: `A premium development located just minutes away from Mall De Goa and North Goa beaches. Velvet Vista is ideal for investors and vacation homeowners, offering luxury amenities and a strategic location.`,
+        
+        nearbyLandmarks: [
+            'Mall De Goa - 5 mins',
+            'North Goa Beaches - 10 mins',
+            'Delfino’s Megamart - 10 mins'
+        ],
+        
+        features: [
+            { icon: 'money-bill-wave', name: '12% Assured Rental Returns' },
+            { icon: 'building', name: 'Service Apartments' },
+            { icon: 'tree', name: 'Scenic Surroundings' },
+            { icon: 'calendar-check', name: 'Flexible Payment Plan' },
+            { icon: 'location-dot', name: 'Prime Porvorim Location' },
+            { icon: 'concierge-bell', name: 'Premium Hospitality' }
+        ],
+        
+        floorPlans: [
+            {
+                name: 'Studio Unit Floor Plan',
+                image: '../vell-vista/Screenshot 2025-05-18 001254.png',
+                downloadUrl: '../vell-vista/Screenshot 2025-05-18 001254.png'
+            },
+            {
+                name: '1 BHK Floor Plan',
+                image: '../vell-vista/Screenshot 2025-05-18 001306.png',
+                downloadUrl: '../vell-vista/Screenshot 2025-05-18 001306.png'
+            },
+        
+        ],
+        
+        documents: [
+            { 
+                type: 'brochure', 
+                name: 'Velvet Vista Brochure', 
+                url: '../vell-vista/VELVET VISTA BROCHURE.pdf', 
+                size: '3.5 MB' 
+            }
+        ],
+        
+        googleMapsUrl: 'https://goo.gl/maps/VelvetVistaGoa',
+        similarProperties: ['102', '103', '104'],
+        builderProperties: ['101', '105', '106'],
+        
+        contact: {
+            phone: '9818223938',
+            whatsapp: '9818223938',
+            email: 'joginderpropertiesreal26@gmail.com'
+        }
+    },
+    '104': {
+    title: 'The Palatial by Hero Homes',
+    location: 'Sector 104, Dwarka Expressway, Gurgaon',
+    price: null, // Price not explicitly mentioned
     pricePerSqft: null, // Not specified in brochure
-    propertyId: 'PROP101',
-    reraNumber: null, // RERA not mentioned
-    possessionStatus: 'Upcoming',
+    propertyId: 'PROP106',
+    reraNumber: [
+        'RC/REP/HARERA/GGM/907/639/2025/10',
+        'RC/REP/HARERA/GGM/908/640/2025/11',
+        'RC/REP/HARERA/GGM/906/638/2025/09'
+    ],
+    possessionStatus: 'New Launch',
     images: [
-       '../vell-vista/VELVET VISTA BROCHURE.pdf-image-000.jpg',
-       '../vell-vista/VELVET VISTA BROCHURE.pdf-image-002.jpg',
-       '../vell-vista/VELVET VISTA BROCHURE.pdf-image-005.jpg',
-       '../vell-vista/VELVET VISTA BROCHURE.pdf-image-054.jpg',
-       '../vell-vista/VELVET VISTA BROCHURE.pdf-image-055.jpg',
-       '../vell-vista/VELVET VISTA BROCHURE.pdf-image-054.jpg',
-       '../vell-vista/VELVET VISTA BROCHURE.pdf-image-055.jpg',
-       '../vell-vista/VELVET VISTA BROCHURE.pdf-image-056.jpg',
-       '../vell-vista/VELVET VISTA BROCHURE.pdf-image-057.jpg',
-       '../vell-vista/VELVET VISTA BROCHURE.pdf-image-058.jpg',
-       '../vell-vista/VELVET VISTA BROCHURE.pdf-image-059.jpg',
-       '../vell-vista/VELVET VISTA BROCHURE.pdf-image-062.jpg',
-       '../vell-vista/VELVET VISTA BROCHURE.pdf-image-058.jpg',
-       '../vell-vista/VELVET VISTA BROCHURE.pdf-image-059.jpg',
-       '../vell-vista/VELVET VISTA BROCHURE.pdf-image-060.jpg',
-       '../vell-vista/VELVET VISTA BROCHURE.pdf-image-062.jpg',
+       '../propassets/images/The Palatial - Brochure Presentation - 042025.pdf-image-042.jpg',
+       '../propassets/images/The Palatial - Brochure Presentation - 042025.pdf-image-044 (1).jpg',
+       '../propassets/images/The Palatial - Brochure Presentation - 042025.pdf-image-044 (2).jpg',
+       '../propassets/images/The Palatial - Brochure Presentation - 042025.pdf-image-047 (1).jpg',
+       '../propassets/images/The Palatial - Brochure Presentation - 042025.pdf-image-062 (1).jpg',
+       '../propassets/images/The Palatial - Brochure Presentation - 042025.pdf-image-062.jpg',
+       '../propassets/images/The Palatial - Brochure Presentation - 042025.pdf-image-065 (1).jpg',
+       '../propassets/images/The Palatial - Brochure Presentation - 042025.pdf-image-068 (1).png',
+       '../propassets/images/The Palatial - Brochure Presentation - 042025.pdf-image-068.png',
+       '../propassets/images/The Palatial - Brochure Presentation - 042025.pdf-image-070 (1).jpg',
+       '../propassets/images/The Palatial - Brochure Presentation - 042025.pdf-image-073 (1).jpg',
+       '../propassets/images/The Palatial - Brochure Presentation - 042025.pdf-image-077 (1).jpg',
+       '../propassets/images/The Palatial - Brochure Presentation - 042025.pdf-image-077 (2).jpg',
+       '../propassets/images/The Palatial - Brochure Presentation - 042025.pdf-image-078 (1).png',
+       '../propassets/images/The Palatial - Brochure Presentation - 042025.pdf-image-081 (1).jpg',
+       '../propassets/images/The Palatial - Brochure Presentation - 042025.pdf-image-081.jpg',
+       '../propassets/images/The Palatial - Brochure Presentation - 042025.pdf-image-083.jpg',
+       '../propassets/images/The Palatial - Brochure Presentation - 042025.pdf-image-085.jpg',
+       '../propassets/images/The Palatial - Brochure Presentation - 042025.pdf-image-088 (1).jpg',
+       '../propassets/images/The Palatial - Brochure Presentation - 042025.pdf-image-091.jpg',
+       '../propassets/images/The Palatial - Brochure Presentation - 042025.pdf-image-094.jpg',
+       '../propassets/images/The Palatial - Brochure Presentation - 042025.pdf-image-097 (1).jpg',
+       '../propassets/images/The Palatial - Brochure Presentation - 042025.pdf-image-100.jpg',
+       '../propassets/images/The Palatial - Brochure Presentation - 042025.pdf-image-103 (1).jpg',
+       '../propassets/images/The Palatial - Brochure Presentation - 042025.pdf-image-117.jpg',
+       '../propassets/images/The Palatial - Brochure Presentation - 042025.pdf-image-119.jpg',
+       '../propassets/images/The Palatial - Brochure Presentation - 042025.pdf-image-121.jpg',
+       '../propassets/images/The Palatial - Brochure Presentation - 042025.pdf-image-123.jpg',
+       '../propassets/images/The Palatial - Brochure Presentation - 042025.pdf-image-125.jpg',
+       '../propassets/images/The Palatial - Brochure Presentation - 042025.pdf-image-127.jpg',
+     
     ],
     highlights: [
-        { icon: 'bed', label: 'Bedrooms', value: 'Studio, 1 & 2 BHK' },
+        { icon: 'bed', label: 'Bedrooms', value: '3.5 & 4.5 BHK + SPR' },
         { icon: 'bath', label: 'Bathrooms', value: null },
-        { icon: 'vector-square', label: 'Area', value: null }
+        { icon: 'vector-square', label: 'Area', value: '2833–3457 sq.ft' }
     ],
-    description: 'Velvet Vista offers premium service apartments in the heart of North Goa. Choose from Studio, 1 & 2 BHK units with assured rental income and an attractive 25:25:25:25 payment plan.',
+    description: 'Ultra-luxury palace-themed residences in Gurgaon with world-class amenities, rooftop infinity pool, massive 60,000 sq.ft clubhouse, and seamless connectivity to IGI Airport. Designed with wrap-around balconies and digital smart home features.',
     
-    builderInfo: `A premium development located just minutes away from Mall De Goa and North Goa beaches. Velvet Vista is ideal for investors and vacation homeowners, offering luxury amenities and a strategic location.`,
+    builderInfo: `Developed by Hero Realty Pvt Ltd, The Palatial is a landmark ultra-luxury project spread across 11+ acres in Sector 104, Gurgaon. With towering G+41/42/43 buildings and only 688 low-density units, this development is set to redefine upscale living on Dwarka Expressway.`,
     
     nearbyLandmarks: [
-        'Mall De Goa - 5 mins',
-        'North Goa Beaches - 10 mins',
-        'Delfino’s Megamart - 10 mins'
+        'IGI Airport - 15 mins',
+        'Dwarka Sector 21 Metro Station - 12 km',
+        'Gurgaon Railway Station - 3 km',
+        'Delhi Public School - opposite site',
+        'Global City Hub - within 8 km',
+        'Super Specialty Hospital - within 6 km'
     ],
     
     features: [
-        { icon: 'money-bill-wave', name: '12% Assured Rental Returns' },
-        { icon: 'building', name: 'Service Apartments' },
-        { icon: 'tree', name: 'Scenic Surroundings' },
-        { icon: 'calendar-check', name: 'Flexible Payment Plan' },
-        { icon: 'location-dot', name: 'Prime Porvorim Location' },
-        { icon: 'concierge-bell', name: 'Premium Hospitality' }
+        { icon: 'building', name: '5 Standalone Towers' },
+        { icon: 'tree', name: '70% Green & Open Area' },
+        { icon: 'calendar-check', name: '30:30:40 Payment Plan' },
+        { icon: 'warehouse', name: 'G+4 High Street Retail' },
+        { icon: 'gem', name: '60,000 sq.ft Clubhouse with Spa & Cultfit Gym' },
+        { icon: 'swimmer', name: 'Rooftop Infinity Swimming Pool' },
+        { icon: 'car', name: 'Vehicle-Free Surface Areas' },
+        { icon: 'leaf', name: 'IGBC Gold Certified Sustainable Homes' }
     ],
     
     floorPlans: [
         {
-            name: 'Studio Unit Floor Plan',
-            image: '../vell-vista/Screenshot 2025-05-18 001254.png',
-            downloadUrl: '../vell-vista/Screenshot 2025-05-18 001254.png'
+            name: '3 BHK + SPR Floor Plan',
+            image: '../palatial/3bhk-spr-layout.jpg',
+            downloadUrl: '../palatial/3bhk-spr-layout.jpg'
         },
         {
-            name: '1 BHK Floor Plan',
-            image: '../vell-vista/Screenshot 2025-05-18 001306.png',
-            downloadUrl: '../vell-vista/Screenshot 2025-05-18 001306.png'
-        },
-       
-    ],
-    
-    documents: [
-        { 
-            type: 'brochure', 
-            name: 'Velvet Vista Brochure', 
-            url: '../vell-vista/VELVET VISTA BROCHURE.pdf', 
-            size: '3.5 MB' 
+            name: '4 BHK + SPR Floor Plan',
+            image: '../palatial/4bhk-spr-layout.jpg',
+            downloadUrl: '../palatial/4bhk-spr-layout.jpg'
         }
     ],
     
-    googleMapsUrl: 'https://goo.gl/maps/VelvetVistaGoa',
-    similarProperties: ['102', '103', '104'],
-    builderProperties: ['101', '105', '106'],
+    documents: [
+        {
+            type: 'brochure',
+            name: 'The Palatial Brochure',
+            url: '../propassets/images/The Palatial - Brochure Presentation - 042025.pdf',
+            size: '10 MB'
+        }
+    ],
+    
+    googleMapsUrl: 'https://goo.gl/maps/Xf1RWmnzPUHjjXRM9', // Example placeholder
+    similarProperties: ['105', '107', '108'],
+    builderProperties: ['106', '109', '110'],
     
     contact: {
         phone: '9818223938',
@@ -267,6 +373,7 @@ const propertyData = {
         email: 'joginderpropertiesreal26@gmail.com'
     }
 }
+
 
 
 };

@@ -69,7 +69,30 @@ image: '../propassets/images/VELVET VISTA BROCHURE.pdf-image-058.jpg',
 propertyId: 'PROP105',
 reraNumber: null // RERA not mentioned in the provided data
 
+},
+{
+  id: '104',
+  title: 'THE PALATIAL by Hero Homes',
+  type: 'residential',
+  status: 'New Launch',
+  location: 'Sector 104, Dwarka Expressway, Gurgaon',
+  description: 'Ultra-luxury residential development by Hero Realty on Dwarka Expressway. Spread across 11+ acres with 5 standalone towers, European palace-themed clubhouse, and world-class amenities. Low-density project with only 688 families and 4 apartments per floor.',
+  price: 50000000, // Price not explicitly mentioned
+  bedrooms: '3 & 4 BHK + SPR',
+  bathrooms: null, // Bathroom count not specified
+  features: [
+    'Ultra-Luxury Palace-Themed Architecture',
+  'Tallest Towers on Dwarka Expressway (G+41/42/43)',
+  '60,000 Sq.Ft G+4 Clubhouse with Cultfit Gym & Rooftop Pool',
+  '1 Acre G+4 High Street Commercial Zone',
+  'Low-Density Living with 70% Green Open Area'
+  
+  ],
+  image: '../propassets/hero-patilal/The Palatial - Brochure Presentation - 042025.pdf-image-044 (1).jpg', // Placeholder image path
+  propertyId: 'PROP106',
+  reraNumber: null // RERA not mentioned in the data
 }
+
 
 ];
 
