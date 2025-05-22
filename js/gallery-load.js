@@ -28,6 +28,23 @@ document.addEventListener('DOMContentLoaded', function() {
       '../propassets/images/The Palatial - Brochure Presentation - 042025.pdf-image-081.jpg',
       '../propassets/images/The Palatial - Brochure Presentation - 042025.pdf-image-103.jpg',
       '../propassets/images/The Palatial - Brochure Presentation - 042025.pdf-image-131.jpg',
+       '../propassets/images/The Palatial - Brochure Presentation - 042025.pdf-image-078 (1).png',
+       '../propassets/images/The Palatial - Brochure Presentation - 042025.pdf-image-081 (1).jpg',
+       '../propassets/images/The Palatial - Brochure Presentation - 042025.pdf-image-081.jpg',
+       '../propassets/images/The Palatial - Brochure Presentation - 042025.pdf-image-083.jpg',
+       '../propassets/images/The Palatial - Brochure Presentation - 042025.pdf-image-085.jpg',
+       '../propassets/images/The Palatial - Brochure Presentation - 042025.pdf-image-088 (1).jpg',
+       '../propassets/images/The Palatial - Brochure Presentation - 042025.pdf-image-091.jpg',
+       '../propassets/images/The Palatial - Brochure Presentation - 042025.pdf-image-094.jpg',
+       '../propassets/images/The Palatial - Brochure Presentation - 042025.pdf-image-097 (1).jpg',
+       '../propassets/images/The Palatial - Brochure Presentation - 042025.pdf-image-100.jpg',
+       '../propassets/images/The Palatial - Brochure Presentation - 042025.pdf-image-103 (1).jpg',
+       '../propassets/images/The Palatial - Brochure Presentation - 042025.pdf-image-117.jpg',
+       '../propassets/images/The Palatial - Brochure Presentation - 042025.pdf-image-119.jpg',
+       '../propassets/images/The Palatial - Brochure Presentation - 042025.pdf-image-121.jpg',
+       '../propassets/images/The Palatial - Brochure Presentation - 042025.pdf-image-123.jpg',
+       '../propassets/images/The Palatial - Brochure Presentation - 042025.pdf-image-125.jpg',
+       '../propassets/images/The Palatial - Brochure Presentation - 042025.pdf-image-127.jpg',
 
   ];
 

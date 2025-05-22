@@ -91,6 +91,30 @@ reraNumber: null // RERA not mentioned in the provided data
   image: '../propassets/hero-patilal/The Palatial - Brochure Presentation - 042025.pdf-image-044 (1).jpg', // Placeholder image path
   propertyId: 'PROP106',
   reraNumber: null // RERA not mentioned in the data
+},
+{
+  id: '105',
+  title: 'SOBHA Aranya',
+  type: 'residential',
+  status: 'New Launch',
+  location: 'Sector 80, Gurugram',
+  description: 'An eco-luxury residential development by SOBHA in collaboration with Karma Lakelands. Located in Sector 80, Gurgaon, this project features 5 towers in Phase 1 with 524 residences offering forest and golf course views. The project integrates nature with luxury through green terraces, double-height lounges, and eco-sustainable amenities including solar panels and rainwater harvesting.',
+  price: 40000000, // Starting price for 3 BHK + DH
+  bedrooms: '3 BHK',
+  bathrooms: null, // Bathroom count not explicitly mentioned
+  features: [
+    '3B+G+43/46 Floor High-Rise Towers',
+    'Forest and Golf Course Views',
+    '75,000 sq. ft. Eco-conscious Clubhouse (Club Antara)',
+    'Eco Amenities: Solar Panels, Rainwater Harvesting, Eco Pond',
+    '5 Lifestyle Zones including Active, Recreational & Kids’ Zones',
+    'Double-Height Visitor Lounge',
+    'No Homes Face Each Other for Privacy',
+    'Olympic Size Pool, Indoor Pool & Sports Facilities'
+  ],
+  image: '../propassets/hero-patilal/The Palatial - Brochure Presentation - 042025.pdf-image-044 (1).jpg', // Placeholder image path
+  propertyId: 'PROP107',
+  reraNumber: 'RC/REP/HARERA/GGM/808/540/2024/35' // RERA number as per brochure
 }
 
 

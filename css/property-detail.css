@@ -1,12 +1,13 @@
 :root {
-	--primary-color: #2c3e50;
-	--accent-color: #3498db;
 	--success-color: #27ae60;
 	--warning-color: #f39c12;
 	--danger-color: #e74c3c;
 	--text-dark: #2c3e50;
 	--text-light: #7f8c8d;
-	--background-light: #f8f9fa;
+	  --primary-color: #2c3e50;
+  --secondary-color: #e74c3c;
+  --accent-color: #3498db;
+--background-light: #f8f9fa;
 	--background-dark: #2c3e50;
 	--shadow-sm: 0 2px 4px rgba(0,0,0,0.1);
 	--shadow-md: 0 4px 6px rgba(0,0,0,0.1);
@@ -16,6 +17,10 @@
 	--container-padding-mobile: 1rem;
 	--container-padding-desktop: 2rem;
 }
+
+ 
+	
+
 /* Reset body margin and handle overflow */
 body {
 	margin: 0;
@@ -221,7 +226,7 @@ body {
 .status-badge {
 	display: inline-block;
 	padding: 0.5rem 1.5rem;
-	background: var(--accent-color);
+	background: var(--danger-color);
 	color: white;
 	border-radius: 30px;
 	font-size: 0.875rem;
@@ -248,7 +253,7 @@ body {
 	font-size: 1rem;
 }
 .location i {
-	color: var(--accent-color);
+	color: var(--secondary-color);
 }
 .price-area {
 	display: flex;
@@ -257,7 +262,7 @@ body {
 }
 .price-area h2 {
 	font-size: 2rem;
-	color: var(--accent-color);
+	color: var(--secondary-color);
 	font-weight: 600;
 }
 .price-per-sqft {
@@ -306,7 +311,7 @@ body {
 }
 .highlight-item i {
 	font-size: 1.5rem;
-	color: var(--accent-color);
+	color: var(--primary-color);
 	width: 2.5rem;
 	height: 2.5rem;
 	display: flex;
@@ -378,7 +383,7 @@ body {
 	color: var(--text-dark);
 }
 .landmarks li i {
-	color: var(--accent-color);
+	color: var(--secondary-color);
 }
 /* Features Section */
 .features-section {
@@ -414,7 +419,7 @@ body {
 }
 .feature-item i {
 	font-size: 1.25rem;
-	color: var(--accent-color);
+	color: var(--secondary-color);
 }
 /* Floor Plans Section */
 .floor-plans-section {
@@ -450,7 +455,7 @@ body {
 	white-space: nowrap;
 }
 .floor-plan-tab.active {
-	background: var(--accent-color);
+	background: var(--secondary-color);
 	color: white;
 }
 .floor-plan-view {
@@ -473,7 +478,7 @@ body {
 	bottom: 1rem;
 	right: 1rem;
 	padding: 0.75rem 1.5rem;
-	background: var(--accent-color);
+	background: var(--secondary-color);
 	color: white;
 	border-radius: var(--border-radius);
 	text-decoration: none;
@@ -556,10 +561,10 @@ body {
 	font-weight: 500;
 }
 .schedule-btn {
-	background: var(--accent-color);
+	background: var(--secondary-color);
 }
 .call-btn {
-	background: var(--success-color);
+	background: var(--primary-color);
 }
 .whatsapp-btn {
 	background: #25d366;
@@ -596,7 +601,7 @@ body {
 .submit-btn {
 	width: 100%;
 	padding: 1rem;
-	background: var(--accent-color);
+	background: var(--text-dark);
 	color: white;
 	border: none;
 	border-radius: var(--border-radius);
@@ -741,7 +746,7 @@ body {
 	top: 0;
 	height: 100%;
 	width: 4px;
-	background: var(--accent-color);
+	background: var(--secondary-color);
 	transform: scaleY(0);
 	transition: transform 0.3s ease;
 	transform-origin: bottom;
@@ -755,7 +760,7 @@ body {
 }
 .external-link i {
 	font-size: 1.25rem;
-	color: var(--accent-color);
+	color: var(--secondary-color);
 	transition: var(--transition);
 }
 .external-link:hover i {
