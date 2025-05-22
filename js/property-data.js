@@ -386,7 +386,121 @@ const propertyData = {
         whatsapp: '9818223938',
         email: 'joginderpropertiesreal26@gmail.com'
     }
+},
+'105': {
+  title: 'SOBHA Aranya',
+  location: 'Sector 80, Gurugram',
+  price: 78287676, // Starting price for 3 BHK + DH
+  pricePerSqft: 26000, // Rate per sq.ft. mentioned in brochure
+  propertyId: 'PROP080',
+  reraNumber: ['RC/REP/HARERA/GGM/808/540/2024/35'],
+  possessionStatus: 'New Launch',
+  images: [
+   '../propassets/Shobha-anaya/PDF Mobile Brochure Aranya.pdf-image-008.jpg',
+   '../propassets/Shobha-anaya/PDF Mobile Brochure Aranya.pdf-image-012.jpg',
+   '../propassets/Shobha-anaya/PDF Mobile Brochure Aranya.pdf-image-023.png',
+   '../propassets/Shobha-anaya/PDF Mobile Brochure Aranya.pdf-image-028.jpg',
+   '../propassets/Shobha-anaya/PDF Mobile Brochure Aranya.pdf-image-035.jpg',
+   '../propassets/Shobha-anaya/PDF Mobile Brochure Aranya.pdf-image-036.jpg',
+   '../propassets/Shobha-anaya/PDF Mobile Brochure Aranya.pdf-image-037.jpg',
+   '../propassets/Shobha-anaya/PDF Mobile Brochure Aranya.pdf-image-038.jpg',
+   '../propassets/Shobha-anaya/PDF Mobile Brochure Aranya.pdf-image-044.jpg',
+   '../propassets/Shobha-anaya/PDF Mobile Brochure Aranya.pdf-image-047.jpg',
+   '../propassets/Shobha-anaya/PDF Mobile Brochure Aranya.pdf-image-049.jpg',
+  ],
+  highlights: [
+    { icon: 'bed', label: 'Bedrooms', value: '3 BHK + DH' },
+    { icon: 'bath', label: 'Bathrooms', value: null },
+    { icon: 'vector-square', label: 'Area', value: '2836–3692 sq.ft' }
+  ],
+  description: 'Eco-luxury residences with views of forest and golf course, 75,000 sq.ft clubhouse, and sustainable living features such as solar power and rainwater harvesting.',
+  builderInfo: `A joint venture between SOBHA and Karma Lakelands, SOBHA Aranya brings eco-conscious luxury to Sector 80, Gurugram. The project features 5 towers in Phase 1, each offering privacy, sustainability, and cutting-edge design in harmony with nature.`,
+  nearbyLandmarks: [
+    'IMT Manesar - 6 km',
+    'Delhi Public School Sector 84 - 6.6 km',
+    'Aarvy Hospital - 7.5 km',
+    'Aria Mall - 15 km',
+    'Medanta Medicity - 16 km',
+    'Unitech Cyber Park - 16 km',
+    'Amity University - 14 km'
+  ],
+  features: [
+    { icon: 'building', name: '5 Towers (3B+G+43/46 Floors)' },
+    { icon: 'tree', name: 'Forest & Golf Course Views' },
+    { icon: 'calendar-check', name: 'OC-Linked Construction Plan' },
+    { icon: 'warehouse', name: 'Eco-Sustainable Clubhouse' },
+    { icon: 'gem', name: '75,000 sq.ft Club Antara' },
+    { icon: 'swimmer', name: 'Olympic & Indoor Pools' },
+    { icon: 'car', name: '3-Level Basement Parking' },
+    { icon: 'leaf', name: 'Rainwater Harvesting & Solar Energy' }
+  ],
+  floorPlans: [
+    {
+      name: 'Master Layout',
+      image: '../propassets/Shobha-anaya/PDF Mobile Brochure Aranya.pdf-image-021.png',
+      downloadUrl: '../propassets/Shobha-anaya/PDF Mobile Brochure Aranya.pdf-image-021.png'
+    },
+    {
+      name: '3 BHK + DH Floor Plan',
+      image: '../propassets/Shobha-anaya/Screenshot 2025-05-23 001137.png',
+      downloadUrl: '../propassets/Shobha-anaya/Screenshot 2025-05-23 001137.png'
+    },
+    {
+      name: '4 BHK + DH Floor Plan',
+      image: '../propassets/Shobha-anaya/Screenshot 2025-05-23 001152.png',
+      downloadUrl: '../propassets/Shobha-anaya/Screenshot 2025-05-23 001152.png'
+    }
+  ],
+  documents: [
+    {
+      type: 'brochure',
+      name: 'SOBHA Aranya Brochure',
+      url: '../propassets/Shobha-anaya/PDF Mobile Brochure Aranya.pdf',
+      size: '13 MB'
+    }, 
+    
+    {
+      type: 'payment Plan',
+      name: 'Payment Plan-Tower-3 type-B2',
+      url: '../propassets/Shobha-anaya/Tower-3 Type B2 Standard Pricing R2.pdf',
+      size: '174 KB'
+    },
+    {
+      type: 'payment Plan',
+      name: 'Payment Plan-Tower-3 type-A1',
+      url: '../propassets/Shobha-anaya/Tower 3 Type A1 Standard Pricing R2.pdf',
+      size: '174 KB'
+    },
+    {
+      type: 'payment Plan',
+      name: 'Payment Plan-Tower-5 type-C1',
+      url: '../propassets/Shobha-anaya/Tower-5_Type C1_Standard Pricing.pdf',
+      size: '174 KB'
+    }
+,
+{
+      type: 'payment Plan',
+      name: 'Payment Plan-Tower-5 type-D1',
+      url: '../propassets/Shobha-anaya/Tower-5_Type D1_Standard Pricing.pdf',
+      size: '174 KB'
+    },
+{
+      type: 'payment Plan',
+      name: 'Payment Plan-Tower-5 type-C2',
+      url: '../propassets/Shobha-anaya/Tower-5_Type C2_Standard Pricing.pdf',
+      size: '174 KB'
+    }
+  ],
+  googleMapsUrl: 'https://goo.gl/maps/Fp9z6L8eL9WYYMwy5', // Example placeholder
+  similarProperties: ['081', '082', '083'],
+  builderProperties: ['080', '084', '085'],
+  contact: {
+    phone: '9818223938',
+    whatsapp: '9818223938',
+    email: 'joginderpropertiesreal26@gmail.com'
+  }
 }
+
 
 
 

@@ -45,6 +45,17 @@ document.addEventListener('DOMContentLoaded', function() {
        '../propassets/images/The Palatial - Brochure Presentation - 042025.pdf-image-123.jpg',
        '../propassets/images/The Palatial - Brochure Presentation - 042025.pdf-image-125.jpg',
        '../propassets/images/The Palatial - Brochure Presentation - 042025.pdf-image-127.jpg',
+        '../propassets/Shobha-anaya/PDF Mobile Brochure Aranya.pdf-image-008.jpg',
+        '../propassets/Shobha-anaya/PDF Mobile Brochure Aranya.pdf-image-012.jpg',
+        '../propassets/Shobha-anaya/PDF Mobile Brochure Aranya.pdf-image-023.png',
+        '../propassets/Shobha-anaya/PDF Mobile Brochure Aranya.pdf-image-028.jpg',
+        '../propassets/Shobha-anaya/PDF Mobile Brochure Aranya.pdf-image-035.jpg',
+        '../propassets/Shobha-anaya/PDF Mobile Brochure Aranya.pdf-image-036.jpg',
+        '../propassets/Shobha-anaya/PDF Mobile Brochure Aranya.pdf-image-037.jpg',
+        '../propassets/Shobha-anaya/PDF Mobile Brochure Aranya.pdf-image-038.jpg',
+        '../propassets/Shobha-anaya/PDF Mobile Brochure Aranya.pdf-image-044.jpg',
+        '../propassets/Shobha-anaya/PDF Mobile Brochure Aranya.pdf-image-047.jpg',
+        '../propassets/Shobha-anaya/PDF Mobile Brochure Aranya.pdf-image-049.jpg',
 
   ];
 

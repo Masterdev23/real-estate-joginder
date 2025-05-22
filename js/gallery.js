@@ -21,16 +21,41 @@ document.addEventListener('DOMContentLoaded', function() {
             title: 'Gokulam Sentury',
             description: 'Take a virtual walk through this stunning 3BHK apartment',
             orientation: 'portrait',
-            duration: '2:30'
+            duration: '00:54'
         },
         {
-            source: '../propassets/images/WhatsApp Video 2025-05-03 at 10.07.40_2d9b95aa.mp4', // Fixed path
-            thumbnail: '../images/video-thumbnail1.jpg',
-            title: 'Modern Apartment Tour',
+            source: '../propassets/hero-patilal/VID-20250503-WA0003.mp4', // Fixed path
+            thumbnail: '../propassets/hero-patilal/VID-20250503-WA0003.mp4',
+            title: 'Hero-Palatial',
             description: 'Take a virtual walk through this stunning 3BHK apartment',
             orientation: 'landscape',
-            duration: '2:30'
-        }
+            duration: '1:36'
+        },
+        {
+            source: '../propassets/hero-patilal/VID-20250503-WA0004.mp4', // Fixed path
+            thumbnail: '../propassets/hero-patilal/VID-20250503-WA0004.mp4',
+            title: 'Hero-Palatial',
+            description: 'Take a virtual walk through this stunning 3BHK apartment',
+            orientation: 'landscape',
+            duration: '00:48'
+        },
+        {
+            source: '../propassets/hero-patilal/VID-20250503-WA0006.mp4', // Fixed path
+            thumbnail: '../propassets/hero-patilal/VID-20250503-WA0006.mp4',
+            title: 'Hero-Palatial',
+            description: ' Take a virtual walk through this stunning 3BHK apartment',
+            orientation: 'landscape',
+            duration: '00:11'
+        },
+        {
+            source: '../propassets/Shobha-anaya/Sobha Aranya- New ECO-Luxe development .MP4', // Fixed path
+            thumbnail: '../propassets/Shobha-anaya/Sobha Aranya- New ECO-Luxe development .MP4',
+            title: 'Shobha Aranya',
+            description: 'Take a virtual walk through this stunning 3BHK apartment',
+            orientation: 'landscape',
+            duration: '5:30'
+        },
+
         // Add more video items as needed
     ];
 
