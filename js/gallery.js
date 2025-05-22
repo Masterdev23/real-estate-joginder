@@ -60,6 +60,32 @@ document.addEventListener('DOMContentLoaded', function() {
     ];
 
     // Populate Videos
+    // Add lightbox container to body
+    document.body.insertAdjacentHTML('beforeend', `
+        <div class="video-lightbox">
+            <div class="lightbox-content">
+                <button class="close-lightbox">
+                    <i class="fas fa-times"></i>
+                </button>
+                <video id="lightbox-video" controls>
+                    <source src="" type="video/mp4">
+                </video>
+                <div class="video-info-lightbox">
+                    <h3 class="lightbox-title"></h3>
+                    <p class="lightbox-description"></p>
+                </div>
+            </div>
+        </div>
+    `);
+
+    // Lightbox elements
+    const lightbox = document.querySelector('.video-lightbox');
+    const lightboxVideo = document.getElementById('lightbox-video');
+    const lightboxTitle = document.querySelector('.lightbox-title');
+    const lightboxDescription = document.querySelector('.lightbox-description');
+    const closeLightbox = document.querySelector('.close-lightbox');
+
+    // Populate Videos
     const videoGrid = document.querySelector('.video-grid');
     
     videoItems.forEach((item, index) => {
@@ -69,83 +95,115 @@ document.addEventListener('DOMContentLoaded', function() {
         videoItem.setAttribute('data-aos-delay', `${index * 100}`);
         
         videoItem.innerHTML = `
-    <div class="video-container">
-        <video class="video-element" preload="metadata" controlsList="nodownload">
-            <source src="${item.source}" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        <div class="video-overlay active">
-            <button class="play-button" aria-label="Play video">
-                <i class="fas fa-play"></i>
-            </button>
-            <div class="video-info-overlay">
-                <h3 class="video-title">${item.title}</h3>
-                <span class="video-duration">${item.duration}</span>
+            <div class="video-container">
+                <video class="video-element" preload="metadata" controlsList="nodownload">
+                    <source src="${item.source}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="video-overlay active">
+                    <button class="play-button" aria-label="Play video">
+                        <i class="fas fa-play"></i>
+                    </button>
+                    <div class="video-info-overlay">
+                        <h3 class="video-title">${item.title}</h3>
+                        <span class="video-duration">${item.duration}</span>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-    <div class="video-details">
-        <h3 class="video-title">${item.title}</h3>
-        <p class="video-description">${item.description}</p>
-    </div>
-`;
-           
+            <div class="video-details">
+                <h3 class="video-title">${item.title}</h3>
+                <p class="video-description">${item.description}</p>
+            </div>
+        `;
         
         videoGrid.appendChild(videoItem);
 
-        // Get video elements after adding to DOM
+        // Get video elements
         const video = videoItem.querySelector('.video-element');
         const overlay = videoItem.querySelector('.video-overlay');
         const playButton = videoItem.querySelector('.play-button');
 
-        // Handle video loading error
+        // Error handling
         video.addEventListener('error', (e) => {
             console.error('Video loading error:', e);
             videoItem.classList.add('video-error');
             overlay.innerHTML = '<span class="error-message">Video could not be loaded</span>';
         });
 
-        // Play button click handler
+        // Play button opens lightbox
         playButton.addEventListener('click', (e) => {
             e.stopPropagation();
-            handleVideoPlay(video, overlay, playButton);
+            openLightbox(item);
         });
 
-        // Video click handler
-        video.addEventListener('click', () => {
-            handleVideoPlay(video, overlay, playButton);
-        });
-
-        // Video ended handler
-        video.addEventListener('ended', () => {
-            overlay.classList.add('active');
-            playButton.innerHTML = '<i class="fas fa-play"></i>';
+        // Thumbnail click also opens lightbox
+        overlay.addEventListener('click', () => {
+            openLightbox(item);
         });
     });
 
-    function handleVideoPlay(video, overlay, button) {
-        // Pause all other videos first
+    // Lightbox functions
+    function openLightbox(videoData) {
+        // Pause all other videos
         document.querySelectorAll('.video-element').forEach(v => {
-            if (v !== video && !v.paused) {
-                v.pause();
-                const otherOverlay = v.closest('.video-container').querySelector('.video-overlay');
-                const otherButton = otherOverlay.querySelector('.play-button');
-                otherOverlay.classList.add('active');
-                otherButton.innerHTML = '<i class="fas fa-play"></i>';
-            }
+            v.pause();
         });
 
-        if (video.paused) {
-            video.play().then(() => {
-                overlay.classList.remove('active');
-                button.innerHTML = '<i class="fas fa-pause"></i>';
-            }).catch(error => {
-                console.error('Video playback error:', error);
-            });
-        } else {
-            video.pause();
-            overlay.classList.add('active');
-            button.innerHTML = '<i class="fas fa-play"></i>';
-        }
+        // Set up lightbox
+        lightboxVideo.src = videoData.source;
+        lightboxTitle.textContent = videoData.title;
+        lightboxDescription.textContent = videoData.description;
+        
+        // Show lightbox
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+
+        // Play video
+        lightboxVideo.play().catch(error => {
+            console.error('Lightbox video playback error:', error);
+        });
     }
+
+    function closeLightboxHandler() {
+        lightboxVideo.pause();
+        lightboxVideo.src = '';
+        lightbox.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    // Close lightbox events
+    closeLightbox.addEventListener('click', closeLightboxHandler);
+    
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) {
+            closeLightboxHandler();
+        }
+    });
+
+    // Keyboard support
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+            closeLightboxHandler();
+        }
+    });
+
+    // Handle window resize for responsive video sizing
+    let resizeTimeout;
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(() => {
+            if (lightbox.classList.contains('active')) {
+                const videoAspect = lightboxVideo.videoWidth / lightboxVideo.videoHeight;
+                const windowAspect = window.innerWidth / window.innerHeight;
+                
+                if (videoAspect > windowAspect) {
+                    lightboxVideo.style.width = '90vw';
+                    lightboxVideo.style.height = 'auto';
+                } else {
+                    lightboxVideo.style.width = 'auto';
+                    lightboxVideo.style.height = '90vh';
+                }
+            }
+        }, 100);
+    });
 });
