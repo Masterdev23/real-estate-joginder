@@ -463,34 +463,62 @@ body {
 
 /* Hero Section Styles */
 .hero-section {
-  position: relative;
-  height: 100vh;
-  overflow: hidden;
-  background-color: var(--primary-color);
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    background-color: var(--primary-color);
 }
 
 .hero-parallax {
-  position: relative;
-  height: 100%;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
-              url('/images/jc-gellidon-GFUXPM7Hf6M-unsplash.jpg') no-repeat center center fixed;
-  background-size: cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  transform-style: preserve-3d;
-  will-change: transform;
+    position: relative;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
+                url('../images/jc-gellidon-GFUXPM7Hf6M-unsplash.jpg') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transform-style: preserve-3d;
+    will-change: transform;
 }
+/* Mobile-specific fixes */
 @media (max-width: 768px) {
+    .hero-section {
+        height: 100vh;
+        /* Use fallback for older devices */
+        height: -webkit-fill-available;
+    }
+
     .hero-parallax {
-        /* Remove fixed attachment for mobile */
-        background-attachment: scroll;
-        /* Ensure background covers the area */
-        background-position: center;
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
+                    url('../images/jc-gellidon-GFUXPM7Hf6M-unsplash.jpg') no-repeat center center;
         background-size: cover;
+        background-attachment: scroll;
+        min-height: 100vh;
+        /* Use fallback for older devices */
+        min-height: -webkit-fill-available;
+    }
+
+    .hero-content {
+        padding: 0 20px;
+        /* Adjust for mobile navigation bars */
+        padding-top: env(safe-area-inset-top);
+        padding-bottom: env(safe-area-inset-bottom);
     }
 }
+
+/* iOS specific fixes */
+@supports (-webkit-touch-callout: none) {
+    .hero-section {
+        height: -webkit-fill-available;
+    }
+
+    .hero-parallax {
+        min-height: -webkit-fill-available;
+    }
+}
+
 .hero-content {
   position: relative;
   z-index: 2;

@@ -99,7 +99,7 @@ reraNumber: null // RERA not mentioned in the provided data
   status: 'New Launch',
   location: 'Sector 80, Gurugram',
   description: 'An eco-luxury residential development by SOBHA in collaboration with Karma Lakelands. Located in Sector 80, Gurgaon, this project features 5 towers in Phase 1 with 524 residences offering forest and golf course views. The project integrates nature with luxury through green terraces, double-height lounges, and eco-sustainable amenities including solar panels and rainwater harvesting.',
-  price: 40000000, // Starting price for 3 BHK + DH
+  price: 78287676, // Starting price for 3 BHK + DH
   bedrooms: '3 BHK',
   bathrooms: null, // Bathroom count not explicitly mentioned
   features: [
@@ -120,12 +120,6 @@ reraNumber: null // RERA not mentioned in the provided data
 
 ];
 
-// Price range configuration for filters
-export const priceRangeConfig = {
-  min: 5000000,  //  50 lakh
-  max: 200000000, // 20 Cr
-  step: 1000000   // 10 L
-};
 
 // Property type options
 export const propertyTypes = [

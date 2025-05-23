@@ -9,7 +9,6 @@ class PropertyManager {
     }
 
     initializeElements() {
-        // Get all required DOM elements
         this.propertiesContainer = document.getElementById('propertiesContainer');
         this.searchInput = document.getElementById('searchInput');
         this.clearSearchBtn = document.getElementById('clearSearch');
@@ -23,30 +22,27 @@ class PropertyManager {
     }
 
     setupInitialState() {
-        // Set initial filter states
         this.filters = {
             search: '',
             propertyType: 'all',
-            maxPrice: 0  // Set initial maxPrice to 0
+            maxPrice: 200000000
         };
         this.searchTimeout = null;
         
-        // Set initial slider value to 0
         if (this.priceRangeSlider) {
-            this.priceRangeSlider.value = "0";
-            this.updatePriceLabel(0);
+            this.priceRangeSlider.max = "200000000";
+            this.priceRangeSlider.value = "200000000";
+            this.updatePriceLabel(200000000);
         }
     }
 
     init() {
-        // Initialize the page
         this.showWelcomeMessage();
         AOS.init({ duration: 800, once: true });
         this.updateActiveFilters();
     }
 
     setupEventListeners() {
-        // Search functionality
         this.searchInput?.addEventListener('input', (e) => {
             clearTimeout(this.searchTimeout);
             this.clearSearchBtn.style.display = e.target.value ? 'flex' : 'none';
@@ -56,8 +52,6 @@ class PropertyManager {
             }, 300);
         });
 
-        
-        // Clear search
         this.clearSearchBtn?.addEventListener('click', () => {
             this.searchInput.value = '';
             this.clearSearchBtn.style.display = 'none';
@@ -65,7 +59,6 @@ class PropertyManager {
             this.applyFilters();
         });
 
-        // Property type filters
         this.propertyTypeInputs.forEach(input => {
             input.addEventListener('change', () => {
                 this.filters.propertyType = input.value;
@@ -73,7 +66,6 @@ class PropertyManager {
             });
         });
 
-        // Price range slider
         this.priceRangeSlider?.addEventListener('input', (e) => {
             const value = parseInt(e.target.value);
             this.updatePriceLabel(value);
@@ -81,7 +73,6 @@ class PropertyManager {
             this.applyFilters();
         });
 
-        // Price preset buttons
         this.presetButtons.forEach(btn => {
             btn.addEventListener('click', () => {
                 const price = parseInt(btn.dataset.price);
@@ -92,23 +83,28 @@ class PropertyManager {
             });
         });
 
-        // Reset filters
         this.resetFiltersBtn?.addEventListener('click', () => this.resetFilters());
     }
 
     updatePriceLabel(value) {
         if (value >= 10000000) {
-            this.selectedPriceLabel.textContent = `₹${(value / 10000000).toFixed(1)} Cr`;
+            const crValue = (value / 10000000).toFixed(1);
+            this.selectedPriceLabel.textContent = `₹${parseFloat(crValue)} Cr`;
+        } else if (value >= 100000) {
+            const lakhValue = (value / 100000).toFixed(1);
+            this.selectedPriceLabel.textContent = `₹${parseFloat(lakhValue)} L`;
         } else {
-            this.selectedPriceLabel.textContent = `₹${(value / 100000).toFixed(1)} L`;
+            this.selectedPriceLabel.textContent = `₹${value.toLocaleString('en-IN')}`;
         }
     }
 
     formatPrice(price) {
         if (price >= 10000000) {
-            return `${(price / 10000000).toFixed(2)} Cr`;
+            const crValue = (price / 10000000).toFixed(2);
+            return `${parseFloat(crValue)} Cr`;
         } else if (price >= 100000) {
-            return `${(price / 100000).toFixed(2)} Lakh`;
+            const lakhValue = (price / 100000).toFixed(2);
+            return `${parseFloat(lakhValue)} Lakh`;
         }
         return price.toLocaleString('en-IN');
     }
@@ -127,7 +123,6 @@ class PropertyManager {
         setTimeout(() => {
             let filtered = [...properties];
 
-            // Apply search filter
             if (this.filters.search) {
                 filtered = filtered.filter(property => 
                     property.title.toLowerCase().includes(this.filters.search) ||
@@ -136,14 +131,12 @@ class PropertyManager {
                 );
             }
 
-            // Apply property type filter
             if (this.filters.propertyType !== 'all') {
                 filtered = filtered.filter(property => 
                     property.type === this.filters.propertyType
                 );
             }
 
-            // Apply price filter
             filtered = filtered.filter(property => 
                 property.price <= this.filters.maxPrice
             );
@@ -155,18 +148,17 @@ class PropertyManager {
     }
 
     resetFilters() {
-        // Reset all filters to default values
         this.searchInput.value = '';
         this.clearSearchBtn.style.display = 'none';
         this.propertyTypeInputs.forEach(input => {
             if (input.value === 'all') input.checked = true;
         });
-        this.priceRangeSlider.value = this.priceRangeSlider.max;
+        this.priceRangeSlider.value = "200000000";
         
         this.filters = {
             search: '',
             propertyType: 'all',
-            maxPrice: parseInt(this.priceRangeSlider.max)
+            maxPrice: 200000000
         };
 
         this.updatePriceLabel(this.filters.maxPrice);
@@ -174,128 +166,125 @@ class PropertyManager {
         this.updateActiveFilters();
     }
 
-// Find the existing updateActiveFilters method and replace it with this:
-updateActiveFilters() {
-    const activeFilters = [];
-    
-    if (this.filters.search) {
-        activeFilters.push(`
-            <div class="active-filter-tag" data-type="search">
-                ${this.filters.search}
-                <i class="fas fa-times" data-filter="search"></i>
-            </div>
-        `);
-    }
-    
-    if (this.filters.propertyType !== 'all') {
-        activeFilters.push(`
-            <div class="active-filter-tag" data-type="type">
-                ${this.filters.propertyType}
-                <i class="fas fa-times" data-filter="type"></i>
-            </div>
-        `);
-    }
+    updateActiveFilters() {
+        const activeFilters = [];
+        
+        if (this.filters.search) {
+            activeFilters.push(`
+                <div class="active-filter-tag" data-type="search">
+                    ${this.filters.search}
+                    <i class="fas fa-times" data-filter="search"></i>
+                </div>
+            `);
+        }
+        
+        if (this.filters.propertyType !== 'all') {
+            activeFilters.push(`
+                <div class="active-filter-tag" data-type="type">
+                    ${this.filters.propertyType}
+                    <i class="fas fa-times" data-filter="type"></i>
+                </div>
+            `);
+        }
 
-    const maxPrice = parseInt(this.priceRangeSlider.max);
-    if (this.filters.maxPrice < maxPrice) {
-        activeFilters.push(`
-            <div class="active-filter-tag" data-type="price">
-                ₹${this.formatPrice(this.filters.maxPrice)}
-                <i class="fas fa-times" data-filter="price"></i>
-            </div>
-        `);
-    }
+        if (this.filters.maxPrice < 200000000) {
+            activeFilters.push(`
+                <div class="active-filter-tag" data-type="price">
+                    ₹${this.formatPrice(this.filters.maxPrice)}
+                    <i class="fas fa-times" data-filter="price"></i>
+                </div>
+            `);
+        }
 
-    this.activeFiltersContainer.innerHTML = activeFilters.join('');
-    
-    // Add click handlers for removing individual filters
-    this.activeFiltersContainer.querySelectorAll('.active-filter-tag i').forEach(closeBtn => {
-        closeBtn.addEventListener('click', (e) => {
-            const filterType = e.currentTarget.dataset.filter;
-            this.clearFilter(filterType);
+        this.activeFiltersContainer.innerHTML = activeFilters.join('');
+        
+        this.activeFiltersContainer.querySelectorAll('.active-filter-tag i').forEach(closeBtn => {
+            closeBtn.addEventListener('click', (e) => {
+                const filterType = e.currentTarget.dataset.filter;
+                this.clearFilter(filterType);
+            });
         });
-    });
-}
+    }
+
     showWelcomeMessage() {
         this.propertiesContainer.innerHTML = `
-         <div class="welcome-message" data-aos="fade-up">
-    <div class="background-shapes">
-        <div class="shape"></div>
-        <div class="shape"></div>
-    </div>
-    <div class="content-wrapper">
-        <i class="fas fa-home"></i>
-        <h2>Find Your Perfect Property</h2>
-        <p>Use the filters above to discover properties that match your preferences</p>
-    </div>
-</div>
+            <div class="welcome-message" data-aos="fade-up">
+                <div class="background-shapes">
+                    <div class="shape"></div>
+                    <div class="shape"></div>
+                </div>
+                <div class="content-wrapper">
+                    <i class="fas fa-home"></i>
+                    <h2>Find Your Perfect Property</h2>
+                    <p>Use the filters above to discover properties that match your preferences</p>
+                </div>
+            </div>
         `;
     }
 
     renderProperties(properties) {
         if (properties.length === 0) {
             this.propertiesContainer.innerHTML = `
-                     <div class="no-results">
-                <div class="shape-decoration">
-                    <div class="shape"></div>
-                    <div class="shape"></div>
+                <div class="no-results">
+                    <div class="shape-decoration">
+                        <div class="shape"></div>
+                        <div class="shape"></div>
+                    </div>
+                    <div class="no-results-content">
+                        <i class="fas fa-search"></i>
+                        <h3>No Properties Found</h3>
+                        <p>Try adjusting your filters to find more properties</p>
+                    </div>
                 </div>
-                <div class="no-results-content">
-                    <i class="fas fa-search"></i>
-                    <h3>No Properties Found</h3>
-                    <p>Try adjusting your filters to find more properties</p>
-                </div>
-            </div>
             `;
             return;
         }
 
-        this.propertiesContainer.innerHTML = properties.map(property => `
+        this.propertiesContainer.innerHTML = properties.map(property => this.renderPropertyCard(property)).join('');
+    }
+
+    renderPropertyCard(property) {
+        return `
             <div class="property-card" data-aos="fade-up">
-            <div class="property-image">
-                <img src="${property.image || './images/placeholder.jpg'}" alt="${property.title}" onerror="this.onerror=null; this.src='./images/placeholder.jpg';">
-                <span class="property-tag">${property.status}</span>
-            </div>
-            <div class="property-content">
-                <h3 class="property-title">${property.title}</h3>
-                <div class="property-location">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span>${property.location}</span>
+                <div class="property-image">
+                    <img src="${property.image || './images/placeholder.jpg'}" alt="${property.title}" onerror="this.onerror=null; this.src='./images/placeholder.jpg';">
+                    <span class="property-tag">${property.status}</span>
                 </div>
-                <p class="property-description">${property.description}</p>
-                <div class="property-features">
-                ${property.features.map((feature, index) => 
-                    `<span class="feature-tag" 
-                           data-feature="${feature}" 
-                           style="--index: ${index}">
-                        ${feature}
-                    </span>`
-                ).join('')}
-                </div>
-                <div class="property-specs">
-                    ${property.bedrooms ? `
+                <div class="property-content">
+                    <h3 class="property-title">${property.title}</h3>
+                    <div class="property-location">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>${property.location}</span>
+                    </div>
+                    <p class="property-description">${property.description}</p>
+                    <div class="property-features">
+                        ${property.features.map((feature, index) => 
+                            `<span class="feature-tag" data-feature="${feature}" style="--index: ${index}">${feature}</span>`
+                        ).join('')}
+                    </div>
+                    <div class="property-specs">
+                        ${property.bedrooms ? `
+                            <div class="spec-item">
+                                <i class="fas fa-bed"></i>
+                                <span>${property.bedrooms} Beds</span>
+                            </div>
+                        ` : ''}
                         <div class="spec-item">
-                            <i class="fas fa-bed"></i>
-                            <span>${property.bedrooms} Beds</span>
+                            <i class="fas fa-bath"></i>
+                            <span>${property.bathrooms} Baths</span>
                         </div>
-                    ` : ''}
-                    <div class="spec-item">
-                        <i class="fas fa-bath"></i>
-                        <span>${property.bathrooms} Baths</span>
+                        <div class="spec-item">
+                            <i class="fas fa-vector-square"></i>
+                            <span>${property.area} sq ft</span>
+                        </div>
                     </div>
-                    <div class="spec-item">
-                        <i class="fas fa-vector-square"></i>
-                        <span>${property.area} sq ft</span>
-                    </div>
+                    <div class="property-price">₹${this.formatPrice(property.price)}</div>
                 </div>
-                <div class="property-price">₹${this.formatPrice(property.price)}</div>
-               
-            </div>
-             <a href="properties-detail.html?id=${property.id}" class="view-details-btn">
+                <a href="properties-detail.html?id=${property.id}" class="view-details-btn">
                     View Details <i class="fas fa-arrow-right"></i>
                 </a>
-        </div>
-    `).join('');
+            </div>
+        `;
     }
 
     clearFilter(filterType) {
@@ -312,17 +301,15 @@ updateActiveFilters() {
                 this.filters.propertyType = 'all';
                 break;
             case 'price':
-                this.priceRangeSlider.value = this.priceRangeSlider.max;
-                this.filters.maxPrice = parseInt(this.priceRangeSlider.max);
-                this.updatePriceLabel(this.filters.maxPrice);
+                this.priceRangeSlider.value = "200000000";
+                this.filters.maxPrice = 200000000;
+                this.updatePriceLabel(200000000);
                 break;
         }
         this.applyFilters();
     }
 }
 
-// Initialize when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
     new PropertyManager();
 });
-
