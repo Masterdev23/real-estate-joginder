@@ -500,8 +500,4 @@ const propertyData = {
     email: 'joginderpropertiesreal26@gmail.com'
   }
 }
-
-
-
-
 };

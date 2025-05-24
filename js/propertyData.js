@@ -112,7 +112,7 @@ reraNumber: null // RERA not mentioned in the provided data
     'No Homes Face Each Other for Privacy',
     'Olympic Size Pool, Indoor Pool & Sports Facilities'
   ],
-  image: '../propassets/hero-patilal/The Palatial - Brochure Presentation - 042025.pdf-image-044 (1).jpg', // Placeholder image path
+  image: '../propassets/Shobha-anaya/PDF Mobile Brochure Aranya.pdf-image-043.jpg', // Placeholder image path
   propertyId: 'PROP107',
   reraNumber: 'RC/REP/HARERA/GGM/808/540/2024/35' // RERA number as per brochure
 }
