@@ -1,257 +1,151 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Available Properties - Joginder Properties</title>
-  <link rel="stylesheet" href="../css/pricing.css">
-  <link rel="stylesheet" href="../css/navbar.css">
-  <link rel="stylesheet" href="../css/footer.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  
+    <title>Property Pricing | Find Your Dream Home</title>
+    <meta name="description" content="Explore properties by budget in Gurgaon, Noida & Delhi. From ₹50L to ₹20Cr, find your perfect home with expert guidance.">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/pricing.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-  <header class="navbar">
-    <div class="nav-brand">
-        <img src="../images/your logo-prop-3.png" alt="Joginder Properties Logo" class="nav-logo">
-        <a href="../index.html" class="brand-name">Joginder Properties</a>
-    </div>
+    <!-- Navigation (Include your existing nav) -->
+    
+    <!-- Hero Section -->
+    <section class="pricing-hero">
+        <div class="hero-content" data-aos="fade-up">
+            <span class="hero-badge">Find Your Perfect Match</span>
+            <h1>Explore Properties by Budget</h1>
+            <p>From ₹50L to ₹20Cr, discover your dream property in prime locations</p>
+            <a href="#filter-section" class="cta-button">
+                Start Browsing
+                <i class="fas fa-arrow-down"></i>
+            </a>
+        </div>
+        <div class="hero-shape"></div>
+    </section>
 
-    <nav class="nav-menu">
-        <ul class="nav-list">
-            <li class="nav-item"><a href="../index.html" class="nav-link">Home</a></li>
-            <li class="nav-item"><a href="./properties.html" class="nav-link">Properties</a></li>
-            <li class="nav-item"><a href="./pricing.html" class="nav-link active">Pricing</a></li>
-            <li class="nav-item"><a href="./gallery.html" class="nav-link">Gallery</a></li>
-            <li class="nav-item"><a href="./about.html" class="nav-link">About</a></li>
-            <li class="nav-item"><a href="./contact.html" class="nav-link contact-btn">Contact Us</a></li>
-        </ul>
-    </nav>
+    <!-- Filter Section -->
+    <section id="filter-section" class="filters-wrapper">
+        <div class="container">
+            <div class="filters-container" data-aos="fade-up">
+                <div class="filter-group">
+                    <label>Price Range</label>
+                    <div class="price-presets">
+                        <button class="preset-btn active" data-min="5000000" data-max="10000000">₹50L - ₹1Cr</button>
+                        <button class="preset-btn" data-min="10000000" data-max="20000000">₹1Cr - ₹2Cr</button>
+                        <button class="preset-btn" data-min="20000000" data-max="50000000">₹2Cr - ₹5Cr</button>
+                        <button class="preset-btn" data-min="50000000" data-max="100000000">₹5Cr - ₹10Cr</button>
+                        <button class="preset-btn" data-min="100000000" data-max="200000000">₹10Cr - ₹20Cr</button>
+                    </div>
+                </div>
 
-    <button class="hamburger" aria-label="Toggle menu">
-        <span class="hamburger-line"></span>
-        <span class="hamburger-line"></span>
-        <span class="hamburger-line"></span>
-    </button>
-</header>
-    <main class="properties-main">
-        <section class="properties-hero">
-            <div class="hero-content" data-aos="fade-up">
-                <h1>Available Properties</h1>
-                <p>Explore our exclusive real estate listings</p>
+                <div class="filter-group">
+                    <label>Location</label>
+                    <select id="location-filter">
+                        <option value="">All Locations</option>
+                        <option value="gurugram">Gurugram</option>
+                        <option value="noida">Noida</option>
+                        <option value="delhi">Delhi</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label>Property Type</label>
+                    <select id="type-filter">
+                        <option value="">All Types</option>
+                        <option value="apartment">Apartment</option>
+                        <option value="villa">Villa</option>
+                        <option value="plot">Plot</option>
+                        <option value="commercial">Commercial</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label>BHK</label>
+                    <div class="bhk-options">
+                        <button class="bhk-btn">2 BHK</button>
+                        <button class="bhk-btn">3 BHK</button>
+                        <button class="bhk-btn">4+ BHK</button>
+                    </div>
+                </div>
             </div>
-        </section>
 
+            <!-- Quick Stats -->
       
-            <!-- Property 1 -->
-           <section class="properties-grid">
-    <!-- Property Card -->
-    <div class="property-card" data-aos="fade-up">
-        <div class="property-image">
-            <span class="status-badge">Available</span>
-            <img src="../images/WhatsApp Image 2025-05-04 at 22.34.12_dd11b9f4.jpg" alt="The Trillion">
-            <div class="price-badge">₹5.5 Cr</div>
-        </div>
-        <div class="property-content">
-            <h2 class="property-title">The Trillion By Experion</h2>
-            <div class="property-info-box">
-                <div class="info-row">
-                    <p class="location">• Sec-48, Gurugram</p>
-                </div>
-                <div class="info-row">
-                    <p class="description">Luxury residential project featuring spacious apartments with world-class amenities and prime location.</p>
-                </div>
-                <div class="features-row">
-                    <p>• 4 Units per Floor</p>
-                    <p>• 3 Towers</p>
-                    <p>• Size: 2850 - 3600 sq ft</p>
-                </div>
-                <div class="action-row">
-                    <a href="properties-detail.html?id=101" class="view-details-btn">
-                        View Details <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="property-card" data-aos="fade-up">
-        <div class="property-image">
-            <span class="status-badge">Available</span>
-            <img src="../propassets/images/Gokulam The Sanctuary luxury Floor.pdf-image-001.png" alt="The Trillion">
-            <div class="price-badge">₹5.5 Cr</div>
-        </div>
-        <div class="property-content">
-            <h2 class="property-title">Gokulam The Santury</h2>
-            <div class="property-info-box">
-                <div class="info-row">
-                    <p class="location">•Sohna South Of Gurgaon</p>
-                </div>
-                <div class="info-row">
-                    <p class="description">Luxury residential project in lap of Aravali featuring spacious apartments with world-class amenities and prime location.</p>
-                </div>
-                <div class="features-row">
-                    <p>• Luxurious 3-Bedroom Suite</p>
-                    <p>• Elegant Fitted Wardrobes</p>
-                    <p>• Parking Space</p>
-                    <p>• 1650 sq.ft Area approx </p>
-                </div>
-                <div class="action-row">
-                    <a href="properties-detail.html?id=102" class="view-details-btn">
-                        View Details <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-          <div class="property-card" data-aos="fade-up">
-    <div class="property-image">
-        <span class="status-badge">Upcoming</span>
-        <img src="../vell-vista/VELVET VISTA BROCHURE.pdf-image-000.jpg" alt="Velvet Vista Premium Service Apartments">
-        <div class="price-badge">₹96.87 Lakhs</div>
-    </div>
-    <div class="property-content">
-        <h2 class="property-title">Velvet Vista Premium Service Apartments</h2>
-        <div class="property-info-box">
-            <div class="info-row">
-                <p class="location">• Porvorim, North Goa</p>
-            </div>
-            <div class="info-row">
-                <p class="description">Premium studio, 1 & 2 BHK service apartments in North Goa with assured rental income and flexible 25:25:25:25 payment plan.</p>
-            </div>
-            <div class="features-row">
-                <p>• Studio, 1 & 2 BHK Units</p>
-                <p>• 12% Assured Rental Returns</p>
-                <p>• Prime Porvorim Location</p>
-                <p>• Premium Hospitality Services</p>
-            </div>
-            <div class="action-row">
-                <a href="properties-detail.html?id=103" class="view-details-btn">
-                    View Details <i class="fas fa-arrow-right"></i>
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
+    </section>
 
-</section>
-   
-            <!-- Add similar property cards for other properties -->
-
-
-            <section class="contact-section" data-aos="fade-up">
-                <div class="contact-container">
-                    <div class="contact-header">
-                        <span class="section-subtitle">Get In Touch</span>
-                        <h2>Interested in a Property?</h2>
-                        <p>Schedule a viewing or get more information about our exclusive listings</p>
-                    </div>
-            
-                    <div class="contact-cards">
-                        <div class="contact-card" data-aos="flip-left">
-                            <div class="card-icon">
-                                <i class="fas fa-phone-alt"></i>
-                            </div>
-                            <h3>Call Us</h3>
-                            <p>Speak directly with our experts</p>
-                            <a href="tel:123-456-7890" class="contact-link">
-                                <span>+919818223938</span>
-                                <i class="fas fa-arrow-right"></i>
-                            </a>
-                        </div>
-            
-                        <div class="contact-card" data-aos="flip-up">
-                            <div class="card-icon">
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <h3>Email Us</h3>
-                            <p>Send us your inquiries</p>
-                            <a href="mailto:info@example.com" class="contact-link">
-                                <span>info@example.com</span>
-                                <i class="fas fa-arrow-right"></i>
-                            </a>
-                        </div>
-            
-                        <div class="contact-card" data-aos="flip-right">
-                            <div class="card-icon">
-                                <i class="fas fa-comments"></i>
-                            </div>
-                            <h3>Live Chat</h3>
-                            <p>Chat with our agents now</p>
-                            <button class="contact-link" onclick="openChat()">
-                                <span>Start Chat</span>
-                                <i class="fas fa-arrow-right"></i>
-                            </button>
-                        </div>
-                    </div>
-            
-                </div>
-            </section>
-    </main>
-
-    <!-- Add this at the end of body tag in pricing.html -->
-<div id="chat-container" class="chat-container hidden">
-    <div class="chat-header">
-        <div class="chat-title">
-            <i class="fas fa-circle online-status"></i>
-            <h3>Live Chat Support</h3>
+    <!-- Property Listings -->
+    <section class="property-listings">
+        <div class="container">
+            <div class="listings-grid" id="propertiesGrid">
+                <!-- Properties will be populated via JavaScript -->
+            </div>
         </div>
-        <button class="close-chat" onclick="toggleChat()">
-            <i class="fas fa-times"></i>
+    </section>
+
+    <!-- Price Explorer Table -->
+    <section class="price-explorer">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Price Range Explorer</h2>
+            <div class="price-table" data-aos="fade-up">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Price Range</th>
+                            <th>Projects Available</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>₹50L – ₹1Cr</td>
+                            <td>48+ Projects</td>
+                            <td><button class="explore-btn">View Projects →</button></td>
+                        </tr>
+                        <!-- Add more rows -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating Action Buttons -->
+    <div class="floating-actions">
+        <button class="fab-button call">
+            <i class="fas fa-phone"></i>
+        </button>
+        <button class="fab-button whatsapp">
+            <i class="fab fa-whatsapp"></i>
+        </button>
+        <button class="fab-button enquire">
+            <i class="fas fa-envelope"></i>
         </button>
     </div>
-    <div class="chat-messages" id="chat-messages"></div>
-    <div class="chat-input-container">
-        <input type="text" id="chat-input" placeholder="Type your message...">
-        <button ="sendMessage()" class="send-button">
-            <i class="fas fa-paper-plane"></i>
+
+    <!-- Live Chat Widget -->
+    <div class="chat-widget">
+        <button class="chat-toggle">
+            <i class="fas fa-comments"></i>
+            <span>Need Help?</span>
         </button>
-    </div>
-</div>
-<footer class="main-footer">
-    <div class="footer-content">
-        <div class="footer-section">
-            <h3>About Us</h3>
-            <p>Your trusted partner in real estate, helping you find the perfect property since 2010.</p>
-        </div>
-        <div class="footer-section">
-            <h3>Quick Links</h3>
-            <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="./about.html">About</a></li>
-                <li><a href="./contact.html">Contact</a></li>
-                <li><a href="./properties.html">Properties</a></li>
-            </ul>
-        </div>
-        <div class="footer-section">
-            <h3>Contact Info</h3>
-            <p>
-                <i class="fas fa-map-marker-alt"></i>Panchgaon, Manesar, Gurgaon<br>
-                <i class="fas fa-phone"></i>+91-9818223938<br>
-                <i class="fas fa-envelope"></i> joginderpropertiesreal26@gmail.com.
-            </p>
-        </div>
-        <div class="footer-section">
-            <h3>Follow Us</h3>
-            <div class="social-links">
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
+        <div class="chat-popup">
+            <div class="chat-header">
+                <h4>Chat with Us</h4>
+                <button class="close-chat">×</button>
+            </div>
+            <div class="chat-body">
+                <!-- Chat content -->
             </div>
         </div>
     </div>
-    <div class="footer-bottom">
-        <p>&copy; 2025 Real Estate Website. All rights reserved.</p>
-        <div class="developer-credits">
-            <p>Designed & Developed by <a href="https://srdev.vercel.app/" target="_blank">Sachin Yadav and Vishal Mohanta</a></p>
-        </div>
-    </div>
-   
-</footer>
-    <sCript src="https://unpkg.com/aos@2.3.1/dist/aos.js"></sCript>
-    <sCript src="../js/pricing.js"></sCript>
-    <sCript src="../js/nav.js"></sCript>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../js/pricing.js"></script>
 </body>
 </html>
