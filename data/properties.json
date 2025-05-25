@@ -2,17 +2,13 @@
     "properties": [
         {
             "id": "prop1",
-            "title": "DLF Privana",
-            "location": "Sector 76-77, Gurugram",
-            "price": 45000000,
-            "type": "apartment",
+            "title": "Luxury Apartment in DLF",
+            "location": "Gurgaon",
+            "price": 15000000,
             "bhk": 3,
-            "area": 2100,
-            "image": "../propassets/images/Gokulam The Sanctuary luxury Floor.pdf-image-009.jpg",
-            "tag": "New Launch",
-            "status": "Under Construction",
-            "possession": "Dec 2026",
-            "amenities": ["Club House", "Swimming Pool", "Garden"]
+            "area": 1800,
+            "image": "../assets/images/property1.jpg",
+            "tag": "Premium"
         }
     
     ]

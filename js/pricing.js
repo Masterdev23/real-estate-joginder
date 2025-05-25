@@ -5,15 +5,29 @@ class PricingPage {
             propertyType: '',
             location: '',
             bhk: [],
-            priceRange: { min: 0, max: Infinity }
+            priceRange: { min: 5000000, max: 200000000 }
         };
         this.currentPage = 1;
         this.itemsPerPage = 6;
+        this.priceRanges = [
+            { min: 5000000, max: 10000000, label: '50L - 1Cr' },
+            { min: 10000000, max: 20000000, label: '1Cr - 2Cr' },
+            { min: 20000000, max: 30000000, label: '2Cr - 3Cr' },
+            { min: 30000000, max: 50000000, label: '3Cr - 5Cr' },
+            { min: 50000000, max: 100000000, label: '5Cr - 10Cr' },
+            { min: 100000000, max: 200000000, label: '10Cr - 20Cr' }
+        ];
 
+        this.init();
+    }
+
+    async init() {
         this.initializeAOS();
         this.initializeElements();
         this.setupEventListeners();
-        this.loadProperties();
+        await this.loadProperties();
+        this.renderPricePresets();
+        this.updatePriceTable();
     }
 
     initializeAOS() {
@@ -29,47 +43,91 @@ class PricingPage {
             propertyType: document.getElementById('propertyType'),
             location: document.getElementById('location'),
             bhkButtons: document.querySelectorAll('.bhk-btn'),
-            pricePresets: document.querySelectorAll('.preset-btn'),
+            pricePresets: document.querySelector('.price-presets'),
             propertiesGrid: document.getElementById('propertiesGrid'),
             propertyCount: document.getElementById('propertyCount'),
             priceTableBody: document.getElementById('priceTableBody'),
-            quickNavButtons: document.querySelectorAll('.quick-nav-btn')
+            quickNavButtons: document.querySelectorAll('.quick-nav-btn'),
+            pagination: document.getElementById('pagination')
         };
     }
 
     setupEventListeners() {
-        // Filter change events
-        this.elements.propertyType.addEventListener('change', () => this.handleFilterChange());
-        this.elements.location.addEventListener('change', () => this.handleFilterChange());
+        // Property type filter
+        this.elements.propertyType?.addEventListener('change', () => this.handleFilterChange());
+        
+        // Location filter
+        this.elements.location?.addEventListener('change', () => this.handleFilterChange());
         
         // BHK buttons
-        this.elements.bhkButtons.forEach(btn => {
+        this.elements.bhkButtons?.forEach(btn => {
             btn.addEventListener('click', () => {
                 btn.classList.toggle('active');
                 this.handleFilterChange();
             });
         });
 
-        // Price presets
-        this.elements.pricePresets.forEach(btn => {
-            btn.addEventListener('click', () => {
-                this.elements.pricePresets.forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
+        // Price preset delegation
+        this.elements.pricePresets?.addEventListener('click', (e) => {
+            if (e.target.classList.contains('preset-btn')) {
+                const buttons = this.elements.pricePresets.querySelectorAll('.preset-btn');
+                buttons.forEach(b => b.classList.remove('active'));
+                e.target.classList.add('active');
+                
                 this.filters.priceRange = {
-                    min: parseInt(btn.dataset.min),
-                    max: parseInt(btn.dataset.max)
+                    min: parseInt(e.target.dataset.min),
+                    max: parseInt(e.target.dataset.max)
                 };
                 this.handleFilterChange();
-            });
+            }
         });
 
         // Quick navigation
-        this.elements.quickNavButtons.forEach(btn => {
+        this.elements.quickNavButtons?.forEach(btn => {
             btn.addEventListener('click', () => {
                 const targetId = btn.dataset.scroll;
-                document.getElementById(targetId).scrollIntoView({ behavior: 'smooth' });
+                const element = document.getElementById(targetId);
+                if (element) {
+                    const headerOffset = 80; // Adjust based on your header height
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
             });
         });
+
+        // Window scroll for sticky elements
+        window.addEventListener('scroll', this.handleScroll.bind(this));
+    }
+
+    handleScroll() {
+        const filterSection = document.querySelector('.filters-group');
+        const priceExplorer = document.querySelector('.price-explorer');
+        
+        if (filterSection && priceExplorer) {
+            const scrollY = window.scrollY;
+            const filterThreshold = filterSection.offsetTop;
+            const priceThreshold = priceExplorer.offsetTop;
+
+            filterSection.classList.toggle('sticky', scrollY >= filterThreshold);
+            priceExplorer.classList.toggle('sticky', scrollY >= priceThreshold);
+        }
+    }
+
+    renderPricePresets() {
+        if (!this.elements.pricePresets) return;
+
+        this.elements.pricePresets.innerHTML = this.priceRanges.map((range, index) => `
+            <button class="preset-btn ${index === 0 ? 'active' : ''}" 
+                    data-min="${range.min}" 
+                    data-max="${range.max}">
+                ₹${range.label}
+            </button>
+        `).join('');
     }
 
     async loadProperties() {
@@ -81,7 +139,6 @@ class PricingPage {
             const data = await response.json();
             this.properties = data.properties;
             this.handleFilterChange();
-            this.updatePriceTable();
         } catch (error) {
             console.error('Error loading properties:', error);
             this.showError('Failed to load properties. Please try again later.');
@@ -89,15 +146,11 @@ class PricingPage {
     }
 
     handleFilterChange() {
-        this.filters.propertyType = this.elements.propertyType.value;
-        this.filters.location = this.elements.location.value;
-        this.filters.bhk = Array.from(this.elements.bhkButtons)
-            .filter(btn => btn.classList.contains('active'))
-            .map(btn => btn.dataset.bhk);
-
+        this.currentPage = 1; // Reset to first page on filter change
         const filtered = this.filterProperties();
         this.renderProperties(filtered);
         this.updatePropertyCount(filtered.length);
+        this.renderPagination(filtered.length);
     }
 
     filterProperties() {
@@ -115,6 +168,62 @@ class PricingPage {
                              property.price <= this.filters.priceRange.max;
 
             return typeMatch && locationMatch && bhkMatch && priceMatch;
+        });
+    }
+
+    renderPagination(totalItems) {
+        if (!this.elements.pagination) return;
+
+        const totalPages = Math.ceil(totalItems / this.itemsPerPage);
+        if (totalPages <= 1) {
+            this.elements.pagination.style.display = 'none';
+            return;
+        }
+
+        this.elements.pagination.style.display = 'flex';
+        this.elements.pagination.innerHTML = `
+            <button class="pagination-btn prev" ${this.currentPage === 1 ? 'disabled' : ''}>
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <div class="page-numbers">
+                ${this.generatePageNumbers(totalPages)}
+            </div>
+            <button class="pagination-btn next" ${this.currentPage === totalPages ? 'disabled' : ''}>
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        `;
+
+        this.setupPaginationListeners();
+    }
+
+    generatePageNumbers(totalPages) {
+        let pages = '';
+        for (let i = 1; i <= totalPages; i++) {
+            if (i === this.currentPage) {
+                pages += `<button class="page-number active">${i}</button>`;
+            } else {
+                pages += `<button class="page-number">${i}</button>`;
+            }
+        }
+        return pages;
+    }
+
+    setupPaginationListeners() {
+        this.elements.pagination?.addEventListener('click', (e) => {
+            const target = e.target;
+            
+            if (target.classList.contains('prev') && this.currentPage > 1) {
+                this.currentPage--;
+                this.handleFilterChange();
+            }
+            else if (target.classList.contains('next')) {
+                this.currentPage++;
+                this.handleFilterChange();
+            }
+            else if (target.classList.contains('page-number')) {
+                this.currentPage = parseInt(target.textContent);
+                this.handleFilterChange();
+            }
         });
     }
 
@@ -155,7 +264,10 @@ class PricingPage {
         const ranges = [
             { min: 5000000, max: 10000000, label: '50L - 1Cr' },
             { min: 10000000, max: 20000000, label: '1Cr - 2Cr' },
-            { min: 20000000, max: 50000000, label: '2Cr - 5Cr' }
+            { min: 20000000, max: 30000000, label: '2Cr - 3Cr' },
+            { min: 30000000, max: 50000000, label: '3Cr - 5Cr' },
+            { min: 50000000, max: 100000000, label: '5Cr - 10Cr' },
+            { min: 100000000, max: 200000000, label: '10Cr - 20Cr' }
         ];
 
         this.elements.priceTableBody.innerHTML = ranges.map(range => {
@@ -187,6 +299,8 @@ class PricingPage {
     }
 
     showLoading() {
+        if (!this.elements.propertiesGrid) return;
+        
         this.elements.propertiesGrid.innerHTML = `
             <div class="loading-state">
                 <div class="spinner"></div>
@@ -196,16 +310,21 @@ class PricingPage {
     }
 
     showError(message) {
+        if (!this.elements.propertiesGrid) return;
+
         this.elements.propertiesGrid.innerHTML = `
             <div class="error-state">
                 <i class="fas fa-exclamation-circle"></i>
                 <h3>Oops! Something went wrong</h3>
                 <p>${message}</p>
+                <button onclick="location.reload()">Try Again</button>
             </div>
         `;
     }
 
     showNoResults() {
+        if (!this.elements.propertiesGrid) return;
+
         this.elements.propertiesGrid.innerHTML = `
             <div class="no-results">
                 <i class="fas fa-search"></i>
@@ -216,7 +335,9 @@ class PricingPage {
     }
 
     updatePropertyCount(count) {
-        this.elements.propertyCount.textContent = count;
+        if (this.elements.propertyCount) {
+            this.elements.propertyCount.textContent = count;
+        }
     }
 }
 
