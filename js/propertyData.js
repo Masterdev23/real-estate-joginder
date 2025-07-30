@@ -115,7 +115,32 @@ reraNumber: null // RERA not mentioned in the provided data
   image: '../propassets/Shobha-anaya/PDF Mobile Brochure Aranya.pdf-image-043.jpg', // Placeholder image path
   propertyId: 'PROP107',
   reraNumber: 'RC/REP/HARERA/GGM/808/540/2024/35' // RERA number as per brochure
+},
+{
+  id: '106',
+  title: 'PARQ by Conscient Group',
+  type: 'residential',
+  status: 'New Launch',
+  location: 'Sector 80, Gurugram',
+  description: 'Parq is a nature-inspired premium residential project developed by Key West Eduinfra & Services Pvt. Ltd. Located in Sector 80, Gurugram, it features 4 high-rise towers on 5.6 acres, offering spacious 3 BHK and 4 BHK residences. Designed with podium-level landscaping, clubhouse, sports courts, and green spaces, Parq emphasizes a balanced and eco-conscious lifestyle.',
+  price: 19000000, // Approx. starting price for 3 BHK
+  bedrooms: '3 BHK & 4 BHK',
+  bathrooms: null, // Not explicitly mentioned
+  features: [
+    '4 High-Rise Towers on 5.6 Acres',
+    'Podium-Level Landscaping',
+    'Clubhouse & Swimming Pool',
+    'Basketball Court & Skating Rink',
+    'Eco-Friendly Architecture',
+    'VRV Air Conditioning',
+    'Modular Kitchen with Hob & Chimney',
+    'Basement Parking & 24x7 Security'
+  ],
+  image: '../propassets/conscient/13.jpg', // Placeholder image path
+  propertyId: 'PROP106',
+  reraNumber: 'RC/REP/HARERA/GGM/808/540/2024/45' // RERA number from brochure
 }
+
 
 
 ];

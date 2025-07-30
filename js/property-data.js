@@ -499,5 +499,105 @@ const propertyData = {
     whatsapp: '9818223938',
     email: 'joginderpropertiesreal26@gmail.com'
   }
+},
+'106': {
+  title: 'PARQ by Conscient Group',
+  location: 'Sector 80, Gurugram',
+  price: 19000000,
+  pricePerSqft: 15000,
+  propertyId: 'PROP106',
+  reraNumber: ['RC/REP/HARERA/GGM/808/540/2024/45'],
+  possessionStatus: 'New Launch',
+  images: [
+   '../propassets/conscient/0.jpg',
+   '../propassets/conscient/2.jpg',
+   '../propassets/conscient/12.jpg',
+   '../propassets/conscient/13.jp',
+  ],
+  highlights: [
+    { icon: 'bed', label: 'Bedrooms', value: '3 BHK & 4 BHK' },
+    { icon: 'bath', label: 'Bathrooms', value: '3–5' },
+    { icon: 'vector-square', label: 'Area', value: '1363–1853 sq.ft (Total)' }
+  ],
+  description: 'Naturally inspired living with thoughtfully designed homes. Parq offers modern residences with premium specifications and amenities in Sector 80, Gurugram.',
+  builderInfo: 'Developed by Key West Eduinfra & Services Pvt. Ltd., Parq is an eco-luxury project designed for lifestyle-focused living with advanced features, modern amenities, and strategic location connectivity.',
+  nearbyLandmarks: [
+    'Karma Lakelands',
+    'DLF Express Greens',
+    'Delhi Public School',
+    'Artemis Hospital',
+    'Entertainland Mall',
+    'Hyatt Regency',
+    'AapnoGhar Resort'
+  ],
+  features: [
+    { icon: 'building', name: '4 Towers on 5.6 Acres' },
+    { icon: 'tree', name: 'Podium-Level Landscaping' },
+    { icon: 'calendar-check', name: 'Clubhouse & Pool' },
+    { icon: 'swimmer', name: 'Kid’s & Adult Pools' },
+    { icon: 'car', name: 'Basement Parking' },
+    { icon: 'leaf', name: 'Eco-friendly Design' },
+    { icon: 'shield', name: '24x7 Security' },
+    { icon: 'basketball', name: 'Basketball & Skating Rink' }
+  ],
+  floorPlans: [
+    {
+      name: 'Master Layout',
+      image: '../propassets/conscient/MASTERL-LAYOUT.jpg',
+      downloadUrl: '../propassets/conscient/MASTERL-LAYOUT.jpg'
+    },
+    {
+      name: '3 BHK  Type A',
+      image: '../propassets/conscient/TYPE-A 3BHK.png',
+      downloadUrl: '../propassets/conscient/TYPE-A 3BHK.png'
+    },
+    {
+      name: '3 BHK + UT Type A',
+      image: '../propassets/conscient/TYPE-A UT 3BHK.png',
+      downloadUrl: '../propassets/parq-aranya/floorplan-type-a.jpg'
+    },
+    {
+      name: '3 BHK + UT Type B',
+      image: '../propassets/conscient/TYPE-B UT 3BHK.png',
+      downloadUrl: '../propassets/conscient/TYPE-B UT 3BHK.png'
+    },
+    {
+      name: '3 BHK + UT Type C',
+      image: '../propassets/conscient/TYPE-C UT 3BHK.png',
+      downloadUrl: '../propassets/conscient/TYPE-C UT 3BHK.png'
+    },
+    {
+      name: '3 BHK + UT Type D',
+      image: '../propassets/conscient/TYPE-D UT 3BHK.png',
+      downloadUrl: '../propassets/conscient/TYPE-D UT 3BHK.png'
+    },
+    {
+      name: '3 BHK + UT Type E',
+      image: '../propassets/conscient/TYPE-E UT 3BHK.png',
+      downloadUrl: '../propassets/conscient/TYPE-E UT 3BHK.png'
+    },
+    {
+      name: '4 BHK + UT Type A',
+      image: '../propassets/conscient/TYPE-A UT 4BHK.png',
+      downloadUrl: '../propassets/conscient/TYPE-A UT 4BHK.png'
+    }
+  ],
+  documents: [
+    {
+      type: 'brochure',
+      name: 'Parq Brochure',
+      url: '../propassets/conscient/Parq Sector 80 Technical Brochure (WhatsApp) - Final (05June2024) copy.pdf',
+      size: '8.9 MB'
+    }
+  ],
+  googleMapsUrl: 'https://goo.gl/maps/8ysKedbNuFoZmHAX6',
+  similarProperties: ['081', '082', '083'],
+  builderProperties: ['106', '107', '108'],
+  contact: {
+    phone: '9818223938',
+    whatsapp: '9818223938',
+    email: 'joginderpropertiesreal26@gmail.com'
+  }
 }
+
 };
