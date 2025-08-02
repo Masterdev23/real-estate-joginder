@@ -139,6 +139,32 @@ reraNumber: null // RERA not mentioned in the provided data
   image: '../propassets/conscient/13.jpg', // Placeholder image path
   propertyId: 'PROP106',
   reraNumber: 'RC/REP/HARERA/GGM/808/540/2024/45' // RERA number from brochure
+},
+{
+  id: '107',
+  title: 'Estate 360 by Max Estates',
+  type: 'residential',
+  status: 'New Launch',
+  location: 'Sector 36A, Gurugram',
+  description: 'Estate 360 by Max Estates is a thoughtfully designed intergenerational residential project located in Sector 36A, Gurugram. Spread across 11.8 acres, the project offers 3 BHK and 4 BHK residences across 6 luxurious towers, including two dedicated to senior living. With over 60 amenities, eco-conscious infrastructure, home automation, and wellness-focused architecture, Estate 360 redefines modern living through its "LiveWell" philosophy.',
+  price: 22000000, // Approx. starting price for 3 BHK
+  bedrooms: '3 BHK & 4 BHK',
+  bathrooms: null, // Not explicitly mentioned
+  features: [
+    '6 Residences on 11.8 Acres',
+    'Intergenerational Community Living',
+    'Clubhouse – The Hub & Antara Club',
+    '60+ Wellness-Focused Amenities',
+    'Serpentine Lake, Pet Park & Amphitheatre',
+    'Smart Home Automation & VRV Air Conditioning',
+    'Wraparound Decks & Dedicated Staff Entry',
+    'IGBC Platinum Pre-Certified Green Project',
+    'Vehicle-Free Ground Living',
+    'Basement Parking & 24x7 Security'
+  ],
+  image: '../propassets/maxestate/estate360.jpg', // Placeholder image path
+  propertyId: 'PROP107',
+  reraNumber: 'RC/REP/HARERA/GGM/860/592/2024/87' // RERA number from brochure
 }
 
 

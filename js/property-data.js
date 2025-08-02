@@ -91,7 +91,7 @@ const propertyData = {
     builderProperties: ['201', '207', '209'],
     
     contact: {
-        phone: '9818223938',
+        phone: '9711197200',
         whatsapp: '9818223938',
         email: 'joginderpropertiesreal26@gmail.com'
     }
@@ -179,7 +179,7 @@ const propertyData = {
     builderProperties: ['104', '110', '115'],
 
     contact: {
-        phone: '9818223938',
+        phone: '9711197200',
         whatsapp: '9818223938',
         email: 'joginderpropertiesreal26@gmail.com'
     }
@@ -262,7 +262,7 @@ const propertyData = {
         builderProperties: ['101', '105', '106'],
         
         contact: {
-            phone: '9818223938',
+            phone: '9711197200',
             whatsapp: '9818223938',
             email: 'joginderpropertiesreal26@gmail.com'
         }
@@ -382,7 +382,7 @@ const propertyData = {
     builderProperties: ['106', '109', '110'],
     
     contact: {
-        phone: '9818223938',
+        phone: '9711197200',
         whatsapp: '9818223938',
         email: 'joginderpropertiesreal26@gmail.com'
     }
@@ -495,7 +495,7 @@ const propertyData = {
   similarProperties: ['081', '082', '083'],
   builderProperties: ['080', '084', '085'],
   contact: {
-    phone: '9818223938',
+    phone: '9711197200',
     whatsapp: '9818223938',
     email: 'joginderpropertiesreal26@gmail.com'
   }
@@ -594,7 +594,106 @@ const propertyData = {
   similarProperties: ['081', '082', '083'],
   builderProperties: ['106', '107', '108'],
   contact: {
-    phone: '9818223938',
+    phone: '9711197200',
+    whatsapp: '9818223938',
+    email: 'joginderpropertiesreal26@gmail.com'
+  }
+},
+'107': {
+  title: 'Estate 360 by Max Estates',
+  location: 'Sector 36A, Gurugram',
+  price: 22000000,
+  pricePerSqft: 16500,
+  propertyId: 'PROP107',
+  reraNumber: ['RC/REP/HARERA/GGM/860/592/2024/87'],
+  possessionStatus: 'New Launch',
+  images: [
+    '../propassets/Max group/max 1.jpeg',
+   '../propassets/Max group/max group.jpeg',
+   '../propassets/Max group/max.jpeg',
+   '../propassets/Max group/max13.jpeg',
+   '../propassets/Max group/max3.jpeg',
+   '../propassets/Max group/max5.jpeg',
+   '../propassets/Max group/max6.jpeg',
+   '../propassets/Max group/max8.jpeg',
+   '../propassets/Max group/max9.jpeg',
+   '../propassets/Max group/max10.jpeg',
+   '../propassets/Max group/max11.jpeg',
+   '../propassets/Max group/max12.jpeg',
+   '../propassets/Max group/max14.jpeg',
+   '../propassets/Max group/max22.jpeg',
+   '../propassets/Max group/max20.jpeg',
+   '../propassets/Max group/max19.jpeg',
+    '../propassets/Max group/max15.jpeg',
+
+   
+  ],
+  highlights: [
+    { icon: 'bed', label: 'Bedrooms', value: '3 BHK & 4 BHK' },
+    { icon: 'bath', label: 'Bathrooms', value: '3–6' },
+    { icon: 'vector-square', label: 'Area', value: '2611–3531 sq.ft (Total)' }
+  ],
+  description: 'Estate 360 is India’s first intergenerational residential community with wellness-focused homes, eco-conscious design, and an amenity-rich lifestyle in Sector 36A, Gurugram.',
+  builderInfo: 'Developed by Max Estates, Estate 360 is IGBC Platinum Pre-Certified and thoughtfully designed with wraparound balconies, smart home automation, senior care amenities, and over 60 wellness features.',
+  nearbyLandmarks: [
+    'Proposed Global City',
+    'Dwarka Expressway',
+    'Cyber City',
+    'Ambience Mall',
+    'Medanta Hospital',
+    'Delhi Public School',
+    'IGI Airport'
+  ],
+  features: [
+    { icon: 'building', name: '6 Residences on 11.8 Acres' },
+    { icon: 'leaf', name: 'IGBC Platinum Pre-Certified Green Project' },
+    { icon: 'wifi', name: 'Smart Home Automation' },
+    { icon: 'swimmer', name: 'The Lagoon Pool & Toddlers’ Pool' },
+    { icon: 'car', name: 'Underground Basement Parking' },
+    { icon: 'tree', name: 'Serpentine Lake & Green Belt Views' },
+    { icon: 'dumbbell', name: 'Sports Block with Tennis & Padel Courts' },
+    { icon: 'shield', name: '24x7 Security & Wellness Centre' }
+  ],
+  floorPlans: [
+    {
+      name: 'Master Layout',
+      image: '../propassets/Max group/Master-layout.png',
+      downloadUrl: '../propassets/Max group/Master-layout.png'
+    },
+    {
+      name: '3 BHK Type A',
+      image: '../propassets/Max group/3bk-1.jpg',
+      downloadUrl: '../propassets/Max group/3bk-1.jpg'
+    },
+    {
+      name: '3 BHK Type B',
+      image: '../propassets/Max group/3bh-2.png',
+      downloadUrl: '../propassets/Max group/3bh-2.png'
+    },
+    {
+      name: '3 BHK Type c',
+      image: '../propassets/Max group/3bhk-3.png',
+      downloadUrl: '../propassets/Max group/3bhk-3.png'
+    },
+    {
+      name: '4 BHK Type A',
+      image: '../propassets/Max group/3bhk-4.jpg',
+      downloadUrl: '../propassets/Max group/3bhk-4.jpg'
+    }
+  ],
+  documents: [
+    {
+      type: 'brochure',
+      name: 'Estate 360 Brochure',
+      url: '../propassets/Max group/E Brochure Estate 360.pdf',
+      size: '31.3 MB'
+    }
+  ],
+  googleMapsUrl: 'https://maps.app.goo.gl/yoLSdVxUXmtM9aCJ7',
+  similarProperties: ['081', '082', '083'],
+  builderProperties: ['106', '107', '108'],
+  contact: {
+    phone: '9711197200',
     whatsapp: '9818223938',
     email: 'joginderpropertiesreal26@gmail.com'
   }
